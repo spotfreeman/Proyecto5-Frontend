@@ -1,0 +1,13 @@
+import { useContext } from "react"
+import UsersContext from "../context/UsersContext"
+
+export const UserList = () => {
+
+    const ctx = useContext()
+
+    return (
+        <>
+
+        </>
+    )
+}
