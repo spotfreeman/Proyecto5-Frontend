@@ -1,7 +1,10 @@
-export const productoReducer = (globalState, actiion) => {
+export const productoReducer = (globalState, action) => {
     switch (actiion.type) {
-        case value:
-
+        case 'OBTENER_USUARIOS':
+            return {
+                ...globalState,
+                newProducto: action.payload
+            }
             break;
 
         default:

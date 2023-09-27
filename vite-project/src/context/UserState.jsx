@@ -35,12 +35,13 @@ export const UserState = ({ children }) => {
     }
 
     return (
-        // antes estaba en value = {{ initialState }}
         <UsersContext.Provider
             value={{
                 usersData: globalState.users,
                 getUsers,
-            }}> {children}
+            }}
+        >
+            {children}
         </UsersContext.Provider>
     )
 }
