@@ -9,7 +9,7 @@ export const ProductosPage = () => {
     return (
         <>
             <div>
-                <Card> <h2 className='text-center'>Productos</h2> </Card>
+                <Card bg='secondary'> <h2 className='text-center'>Productos</h2> </Card>
             </div>
             <div>
                 <Card> <h3 className='text-center'>Listado de Productos</h3> </Card>

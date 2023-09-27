@@ -7,9 +7,9 @@ import { Card } from 'react-bootstrap'
 export const HomePage = () => {
     return (
         <>
-            <h1>Bienvenido a Home de APP</h1>
+            <h1 className="text-center"> [3D]Print </h1>
             <Card>
-                <Card.Body>This is some text within a card body.</Card.Body>
+                <Card.Body>Podria colocar un carroucel</Card.Body>
             </Card>
             <Headers />
             <Card>
