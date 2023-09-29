@@ -11,7 +11,7 @@ export const UserState = ({ children }) => {
                 id: 0,
                 nombre: 'Ra',
                 apellido: 'Oy',
-                rut: '15555555-0',
+                rut: '1555555-0',
                 edad: 20,
                 correo: 'raoy@mail.com'
             }
