@@ -13,7 +13,9 @@ export const ProductoState = ({ children }) => {
     const getProductos = async () => {
         try {
             const response = await axiosClient.get('/productos')
+            console.log("ProductoState OK")
             dispatch({
+
                 // TYPE se manda al SWITH del REDUCER
                 type: 'OBTENER_PRODUCTOS',
                 // Siempre es .data
@@ -24,6 +26,10 @@ export const ProductoState = ({ children }) => {
         }
     }
 
+
+
+
+
     return (
         <ProductoContext.Provider
             value={{
@@ -33,5 +39,7 @@ export const ProductoState = ({ children }) => {
         >
             {children}
         </ProductoContext.Provider>
+
     )
+
 }

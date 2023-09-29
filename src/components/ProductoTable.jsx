@@ -1,5 +1,8 @@
+// Importaciones basicas
 import { useContext, useEffect, useState } from "react";
 import ProductoContext from "../context/Producto/ProductoContext";
+
+// Importaciones adicionales
 import Button from 'react-bootstrap/Button';
 
 export const ProductoTable = () => {
