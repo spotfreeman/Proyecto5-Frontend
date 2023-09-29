@@ -9,11 +9,11 @@ export const UserState = ({ children }) => {
         users: [
             {
                 id: 0,
-                nombre: 'Raul',
-                apellido: 'Oyarzun',
-                rut: '15538730-0',
-                edad: 40,
-                correo: 'r.oyarzun83@gmail.com'
+                nombre: 'Ra',
+                apellido: 'Oy',
+                rut: '15555555-0',
+                edad: 20,
+                correo: 'raoy@mail.com'
             }
         ]
     }
