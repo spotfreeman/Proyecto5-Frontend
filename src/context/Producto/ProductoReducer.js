@@ -1,6 +1,6 @@
-export const productoReducer = (globalState, action) => {
+export const ProductoReducer = (globalState, action) => {
     switch (action.type) {
-        case 'OBTENER_PRODUCTO':
+        case 'OBTENER_PRODUCTOS':
             return {
                 ...globalState,
                 newProducto: action.payload
