@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
     },
     plugins: [react()],
     server: {
-      port: 4001
+      port: 4000
     }
   }
 }
