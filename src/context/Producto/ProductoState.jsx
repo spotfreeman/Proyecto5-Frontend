@@ -12,7 +12,7 @@ export const ProductoState = ({ children }) => {
 
     const getProductos = async () => {
         try {
-            const response = await axiosClient.get('/producto')
+            const response = await axiosClient.get('/productos')
 
             dispatch({
 
