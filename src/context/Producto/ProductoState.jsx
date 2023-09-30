@@ -13,7 +13,7 @@ export const ProductoState = ({ children }) => {
     const getProductos = async () => {
         try {
             const response = await axiosClient.get('/producto')
-            console.log("ProductoState OK")
+
             dispatch({
 
                 // TYPE se manda al SWITH del REDUCER
