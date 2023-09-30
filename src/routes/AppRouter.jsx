@@ -9,7 +9,7 @@ export const AppRouter = () => {
             <Routes>
                 <Route path='/' element={<HomePage />} />
                 <Route path='/about' element={<AboutPage />} />
-                <Route path='/productos' element={<ProductosPage />} />
+                <Route path='/producto' element={<ProductosPage />} />
 
                 <Route path='*' element={<h1>Error 404 - Pagina no existe </h1>} />
             </Routes>
