@@ -16,7 +16,7 @@ export const HomePage = () => {
 
             <UserList />
 
-            <ProductoTable />
+
 
             <Footer />
         </>
