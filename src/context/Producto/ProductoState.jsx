@@ -5,7 +5,7 @@ import { axiosClient } from "../../config/api.js"
 
 export const ProductoState = ({ children }) => {
     const initialState = {
-        producto: [],
+        productos: [],
     }
 
     const [globalState, dispatch] = useReducer(ProductoReducer, initialState)
@@ -26,20 +26,14 @@ export const ProductoState = ({ children }) => {
         }
     }
 
-
-
-
-
     return (
         <ProductoContext.Provider
             value={{
-                producto: globalState.producto,
+                productos: globalState.productos,
                 getProductos
             }}
         >
             {children}
         </ProductoContext.Provider>
-
     )
-
 }
