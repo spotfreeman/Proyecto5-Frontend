@@ -45,7 +45,7 @@ export const ProductoTable = () => {
                                             <td>{producto.valor}</td>
                                             <td>{producto.descripcion}</td>
                                             <td>{producto.material}</td>
-                                            <td><Button variant="primary">Primary</Button>{' '}</td>
+                                            <td></td>
                                         </tr>)
                                     )
                                 }
