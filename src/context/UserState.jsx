@@ -1,6 +1,6 @@
 import { useReducer } from "react"
-import UsersContext from "./UsersContext"
-import { reducer } from "./UserReducer"
+import UsersContext from "./UsersContext.js"
+import { reducer } from "./UserReducer.js"
 import { axiosClient } from "../config/api"
 
 export const UserState = ({ children }) => {
@@ -9,14 +9,14 @@ export const UserState = ({ children }) => {
         users: [
             {
                 id: '',
-                nombre: 'Ra',
-                apellido: 'Oy',
-                rut: '1555555-0',
-                edad: '20',
-                correo: 'raoy@mail.com'
+                nombre: '',
+                apellido: '',
+                rut: '',
+                edad: '',
+                correo: ''
             }
         ],
-        // authState: false
+        authState: false
     }
 
     const [globalState, dispatch] = useReducer(reducer, initialState)
@@ -47,15 +47,45 @@ export const UserState = ({ children }) => {
         }
     }
 
+    const loginUser = async (dataForm) => {
+        try {
+            const response = await axiosClient.prototype('/login', dataForm)
+            dispatch(
+                {
+                    type: "LOGIN_EXITOSO",
+                    payload: response.data
+                }
+            )
+            console.log('Login exitoso.')
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    const verifyingToken = async () => {
+        const token = localStorage.getItem('token')
+        if (token) {
+            axiosClient.defaults.headers.common['Authorization'] = token
+        } else {
+            delete axiosClient.defaults.headers.common['Authorization']
+        }
+        const response = await axiosClient.get('veryfy-token')
+        dispatch({
+            type: "OBTENER_USUARIO",
+            payload: response.data
+        })
+    }
+
     return (
         <UsersContext.Provider
             value={{
                 usersData: globalState.users,
+                Authorization: globalState.authStatus,
                 getUsers,
-                singupUser
+                singupUser,
+                loginUser,
+                verifyingToken
             }}
-        >
-            {children}
-        </UsersContext.Provider>
+        >{children}</UsersContext.Provider>
     )
 }

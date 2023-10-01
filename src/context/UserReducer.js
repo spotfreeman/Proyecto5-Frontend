@@ -20,7 +20,8 @@ export const reducer = (globalState, action) => {
             console.log('globalState', globalState)
             return {
                 ...globalState,
-                newUser: action.payload
+                authStatus: true,
+                usersData: action.payload
             }
 
         default:
