@@ -1,5 +1,7 @@
 import { UserList } from "../components/UserList"
-import { Card } from 'react-bootstrap'
+import { Card, Container } from 'react-bootstrap'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 export const HomePage = () => {
     return (
@@ -10,13 +12,22 @@ export const HomePage = () => {
                     <p>Con la guía correcta lograras tener tus ideas y diseños en tus manos...</p>
                 </Card.Body>
             </Card>
-
             <Card>
                 <Card.Body style={{ height: '500px' }}>
-                    <h1>Mi nombre es</h1>
-                    <h1>Raul</h1>
-                    <h1>Oyarzun</h1>
-                    <h3>Con la guía correcta. Transfórmate en el programador que las empresas amarán y paga sólo $49.90 el primer año.</h3>
+                    <Row>
+                        <Col>
+                            <h2 className="text-center" style={{ fontSize: '300px' }}> [3D] </h2>
+                            <h2 className="text-center" style={{ fontSize: '100px' }}> Print </h2>
+
+                        </Col>
+
+                        <Col>
+                            <h2 style={{ fontSize: '80px' }}>Mi nombre es</h2>
+                            <h2 style={{ fontSize: '80px' }}>Raul</h2>
+                            <h2 style={{ fontSize: '80px' }}>Oyarzun</h2>
+                            <h3>Estudiante autodidacta y fanatico de las tecnologias, y podre ayudarte en tu incursion en tus hobbys.</h3>
+                        </Col>
+                    </Row>
                 </Card.Body>
             </Card>
 

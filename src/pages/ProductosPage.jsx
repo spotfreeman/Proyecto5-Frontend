@@ -11,12 +11,12 @@ import Col from 'react-bootstrap/Col';
 export const ProductosPage = () => {
     return (
         <>
-            <div>
-                <Card bg='secondary'> <h2 className='text-center'>Productos</h2> </Card>
-            </div>
-            <div>
-                <Card> <h3 className='text-center'>Listado de Productos</h3> </Card>
-            </div>
+
+            <Card className='border-0'>
+                <div className='text-center'>
+                    <Card bg='secondary rounded-0'> <h2 className='text-center text-white' style={{ height: '70px' }}>Productos</h2> </Card>
+                </div>
+            </Card>
             {/* <ProductoTable /> */}
             <Container>
                 <Row>
