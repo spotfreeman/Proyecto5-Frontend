@@ -7,7 +7,7 @@ export const HomePage = () => {
     return (
         <>
             <Card bg='dark text-white rounded-0' className="card-fondo">
-                <Card.Body style={{ height: '500px', }} >
+                <Card.Body style={{ height: '700px', }} >
                     <h1>Imprimir es Facil!</h1>
                     <p>Con la guía correcta lograras tener tus ideas y diseños en tus manos...</p>
                 </Card.Body>
@@ -18,7 +18,6 @@ export const HomePage = () => {
                         <Col>
                             <h2 className="text-center" style={{ fontSize: '300px' }}> [3D] </h2>
                             <h2 className="text-center" style={{ fontSize: '100px' }}> Print </h2>
-
                         </Col>
 
                         <Col>
@@ -32,7 +31,7 @@ export const HomePage = () => {
             </Card>
 
             <Card bg='dark text-white rounded-0' className="card-fondo2">
-                <Card.Body style={{ height: '500px' }}>
+                <Card.Body style={{ height: '700px' }}>
                     <h1>Por que imprimir en 3D?</h1>
                 </Card.Body>
             </Card>

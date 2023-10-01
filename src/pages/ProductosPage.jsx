@@ -7,6 +7,9 @@ import ListGroup from 'react-bootstrap/ListGroup'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
+import print from '../assets/img/impresora.png'
+
 
 export const ProductosPage = () => {
     return (
@@ -17,13 +20,18 @@ export const ProductosPage = () => {
                     <Card bg='secondary rounded-0'> <h2 className='text-center text-white' style={{ height: '70px' }}>Productos</h2> </Card>
                 </div>
             </Card>
-            {/* <ProductoTable /> */}
+            <Card>
+                <ProductoTable />
+
+            </Card>
+
             <Container>
                 <Row>
                     <Col>
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+                        <Card style={{ width: '22rem' }}>
+                            <Image src={print} style={{ width: '50%', textAlign: 'center' }} />
                             <Card.Body>
+
                                 <Card.Title>Card Title</Card.Title>
                                 <Card.Text>
                                     Some quick example text to build on the card title and make up the
@@ -41,8 +49,8 @@ export const ProductosPage = () => {
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col> <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+                    <Col> <Card style={{ width: '22rem' }}>
+                        <Image src={print} style={{ width: '50%' }} fluid />
                         <Card.Body>
                             <Card.Title>Card Title</Card.Title>
                             <Card.Text>
@@ -62,8 +70,8 @@ export const ProductosPage = () => {
                     </Card>
                     </Col>
 
-                    <Col> <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+                    <Col> <Card style={{ width: '22rem' }}>
+                        <Image src={print} style={{ width: '50%' }} fluid />
                         <Card.Body>
                             <Card.Title>Card Title</Card.Title>
                             <Card.Text>

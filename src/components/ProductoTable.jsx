@@ -1,4 +1,5 @@
 // Importaciones basicas
+
 import { useContext, useEffect, useState } from "react";
 import ProductoContext from "../context/Producto/ProductoContext";
 
@@ -8,6 +9,7 @@ import Button from 'react-bootstrap/Button';
 export const ProductoTable = () => {
 
     const [productos, setProductos] = useState([])
+
     // globalContext se suele utilizar ctx
     const globalContext = useContext(ProductoContext)
 
@@ -26,14 +28,13 @@ export const ProductoTable = () => {
             <div className="container">
                 <div className="row">
                     <div className="col">
-                        <table>
+                        <table className="table table-dark table-hover">
                             <thead>
                                 <tr>
                                     <th>Nombre</th>
                                     <th>Codigo</th>
                                     <th>Valor</th>
-                                    <th>Descripcion</th>
-                                    <th>Material</th>
+                                    <th>Accion</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -43,9 +44,6 @@ export const ProductoTable = () => {
                                             <td>{producto.nombre}</td>
                                             <td>{producto.codigo}</td>
                                             <td>{producto.valor}</td>
-                                            <td>{producto.descripcion}</td>
-                                            <td>{producto.material}</td>
-                                            <td></td>
                                         </tr>)
                                     )
                                 }

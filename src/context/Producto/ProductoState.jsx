@@ -1,11 +1,11 @@
 import { useReducer } from 'react'
 import ProductoContext from './ProductoContext'
 import { ProductoReducer } from './ProductoReducer'
-import { axiosClient } from "../../config/api.js"
+import { axiosClient } from "../../config/api"
 
 export const ProductoState = ({ children }) => {
     const initialState = {
-        productos: []
+        productos: [],
     }
 
     const [globalState, dispatch] = useReducer(ProductoReducer, initialState)
@@ -22,7 +22,7 @@ export const ProductoState = ({ children }) => {
                 payload: response.data
             })
         } catch (error) {
-            console.log(error)
+            //console.log(error)
         }
     }
 
