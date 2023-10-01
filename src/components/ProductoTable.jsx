@@ -39,7 +39,7 @@ export const ProductoTable = () => {
                             </thead>
                             <tbody>
                                 {
-                                    productos.map(producto => (
+                                    productos.map((producto) => (
                                         <tr key={producto._id}>
                                             <td>{producto.nombre}</td>
                                             <td>{producto.codigo}</td>

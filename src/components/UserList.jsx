@@ -16,7 +16,7 @@ export const UserList = () => {
         <>
             <h2>Lista de Usuarios</h2>
             {
-                usersData.map(user => {
+                usersData.map((user) => {
                     return (
                         <div key={user._id}>
                             <h3>{user.nombre} {user.apellido} </h3>
