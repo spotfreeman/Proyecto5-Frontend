@@ -1,3 +1,17 @@
 body {
     background-color: rgb(219, 219, 219);
 }
+
+.card-fondo {
+    background-image: url("./assets/img/DSC03003_20.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+
+.card-fondo2 {
+    background-image: url("./assets/img/setrol.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
