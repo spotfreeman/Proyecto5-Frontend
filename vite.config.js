@@ -6,11 +6,11 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   return {
     define: {
-      __APP_ENV__: env.APP_ENV__
+      __APP_ENV__: env.APP_ENV
     },
     plugins: [react()],
     server: {
-      port: 4000
+      port: 4002
     }
   }
 }

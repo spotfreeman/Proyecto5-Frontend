@@ -1,21 +1,22 @@
 import { useReducer } from "react"
 import UsersContext from "./UsersContext"
 import { reducer } from "./UserReducer"
-import { axiosClient } from "../config/api.js"
+import { axiosClient } from "../config/api"
 
 export const UserState = ({ children }) => {
 
     const initialState = {
         users: [
             {
-                id: 0,
+                id: '',
                 nombre: 'Ra',
                 apellido: 'Oy',
                 rut: '1555555-0',
-                edad: 20,
+                edad: '20',
                 correo: 'raoy@mail.com'
             }
-        ]
+        ],
+        // authState: false
     }
 
     const [globalState, dispatch] = useReducer(reducer, initialState)
@@ -34,11 +35,24 @@ export const UserState = ({ children }) => {
         }
     }
 
+    const singupUser = async (dataForm) => {
+        try {
+            const response = await axiosClient.post('/users', dataForm)
+            dispatch({
+                type: "REGISTRAR_USUARIO",
+                payload: response.data
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     return (
         <UsersContext.Provider
             value={{
                 usersData: globalState.users,
                 getUsers,
+                singupUser
             }}
         >
             {children}

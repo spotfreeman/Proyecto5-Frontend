@@ -6,12 +6,17 @@ import Card from 'react-bootstrap/Card';
 export const Footer = () => {
     return (
         <>
-            <Card.Body fixed='bottom'>
-                <Card.Text>
-                    <Card bg='dark text-white'><h5 className='text-center'>Proyecto 5 : e-Commerce -  Creado por ROB</h5>
-                    </Card>
-                </Card.Text >
-            </Card.Body >
+            <Container >
+                <Card bg='dark text-white rounded-0'>
+                    <div className='text-center' style={{ height: '100px' }}>
+                        <h3>Footer</h3>
+                        <h4>Proyecto 5 - e-Commerce </h4>
+                        <h4>Creado por ROB</h4>
+                    </div>
+                </Card>
+
+            </Container>
+
         </>
     )
 }

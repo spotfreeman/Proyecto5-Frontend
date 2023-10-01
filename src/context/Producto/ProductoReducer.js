@@ -4,11 +4,10 @@ export const ProductoReducer = (globalState, action) => {
             return {
                 ...globalState,
                 newProducto: action.payload
-
             }
 
         default:
-            return globalState
+            return globalState;
     }
 
 }

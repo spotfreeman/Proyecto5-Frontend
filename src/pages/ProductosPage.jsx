@@ -1,6 +1,9 @@
+// Funcionalidades
+import { ProductoTable } from '../components/ProductoTable';
+
+// Bootstrap
 import Card from 'react-bootstrap/Card'
 import ListGroup from 'react-bootstrap/ListGroup'
-
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -14,7 +17,7 @@ export const ProductosPage = () => {
             <div>
                 <Card> <h3 className='text-center'>Listado de Productos</h3> </Card>
             </div>
-
+            {/* <ProductoTable /> */}
             <Container>
                 <Row>
                     <Col>

@@ -17,7 +17,6 @@ export const UserList = () => {
     return (
         <>
             <h2>Lista de Usuarios</h2>
-
             {
                 usersData.map(user => {
                     return (

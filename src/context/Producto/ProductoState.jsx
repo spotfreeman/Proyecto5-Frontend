@@ -5,7 +5,7 @@ import { axiosClient } from "../../config/api.js"
 
 export const ProductoState = ({ children }) => {
     const initialState = {
-        productos: [],
+        productos: []
     }
 
     const [globalState, dispatch] = useReducer(ProductoReducer, initialState)
