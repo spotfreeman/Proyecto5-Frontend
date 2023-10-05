@@ -8,7 +8,7 @@ export const SingUp = () => {
         <>
             <Container>
                 <Row className="justify-content-md-center" style={{ height: '100px' }}>
-                    <Col xs lg="2">
+                    <Col xs lg="2" bg='black' >
                     </Col>
                     <Col md="auto"></Col>
                     <Col xs lg="2">
@@ -36,7 +36,7 @@ export const SingUp = () => {
                                 </div>
 
                                 <div>
-                                    <label htmlFor="apellido">apellido</label>
+                                    <label htmlFor="apellido">Apellido</label>
                                     <div>
                                         <input
                                             type="text"
@@ -48,7 +48,7 @@ export const SingUp = () => {
                                 </div>
 
                                 <div>
-                                    <label htmlFor="rut">rut</label>
+                                    <label htmlFor="rut">Rut</label>
                                     <div>
                                         <input
                                             type="text"
@@ -60,7 +60,7 @@ export const SingUp = () => {
                                 </div>
 
                                 <div>
-                                    <label htmlFor="edad">edad</label>
+                                    <label htmlFor="edad">Edad</label>
                                     <div>
                                         <input
                                             type="number"
@@ -72,7 +72,7 @@ export const SingUp = () => {
                                 </div>
 
                                 <div>
-                                    <label htmlFor="correo">correo</label>
+                                    <label htmlFor="correo">Correo</label>
                                     <div>
                                         <input
                                             type="email"
@@ -84,7 +84,7 @@ export const SingUp = () => {
                                 </div>
 
                                 <div>
-                                    <label htmlFor="password">password</label>
+                                    <label htmlFor="password">Password</label>
                                     <div>
                                         <input
                                             type="password"
