@@ -23,7 +23,7 @@ export const UserState = ({ children }) => {
 
     const getUsers = async () => {
         try {
-            const response = await axiosClient.get('/api/users')
+            const response = await axiosClient.get('/api/v1/users')
             //console.log(response.data)
 
             dispatch({
