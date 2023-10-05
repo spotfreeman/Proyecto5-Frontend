@@ -8,7 +8,7 @@ export const UserState = ({ children }) => {
     const initialState = {
         users: [
             {
-                id: '',
+                id: '1',
                 nombre: '',
                 apellido: '',
                 rut: '',
@@ -49,7 +49,7 @@ export const UserState = ({ children }) => {
 
     const loginUser = async (dataForm) => {
         try {
-            const response = await axiosClient.prototype('/login', dataForm)
+            const response = await axiosClient.post('/login', dataForm)
             dispatch(
                 {
                     type: "LOGIN_EXITOSO",
@@ -69,7 +69,7 @@ export const UserState = ({ children }) => {
         } else {
             delete axiosClient.defaults.headers.common['Authorization']
         }
-        const response = await axiosClient.get('veryfy-token')
+        const response = await axiosClient.get('/veryfy-token')
         dispatch({
             type: "OBTENER_USUARIO",
             payload: response.data

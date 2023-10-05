@@ -8,7 +8,6 @@ import Card from 'react-bootstrap/Card';
 export const Login = () => {
     return (
         <>
-
             <div className="text-center"> Login </div>
 
             <div className="d-flex justify-content-center align-items-center">
