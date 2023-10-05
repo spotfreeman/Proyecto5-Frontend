@@ -8,11 +8,11 @@ export const UserState = ({ children }) => {
     const initialState = {
         users: [
             {
-                id: '1',
+                id: 0,
                 nombre: '',
                 apellido: '',
                 rut: '',
-                edad: '',
+                edad: 0,
                 correo: ''
             }
         ],
@@ -23,7 +23,7 @@ export const UserState = ({ children }) => {
 
     const getUsers = async () => {
         try {
-            const response = await axiosClient.get('/users')
+            const response = await axiosClient.get('/api/users')
             //console.log(response.data)
 
             dispatch({

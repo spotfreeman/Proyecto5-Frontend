@@ -13,30 +13,30 @@ export const Footer = () => {
                 <Row>
                     <Col>
                         <h3 className='text-center'>Redes Sociales</h3>
-                        <ul class="list-group text-center">
+                        <ul className="list-group text-center">
                             <li className="list-group-item bg-transparent border-0 text-white">
-                                <i class="bi bi-twitter" style={{ fontSize: '5rem' }} ></i>
+                                <i className="bi bi-twitter" style={{ fontSize: '5rem' }} ></i>
                             </li>
                             <li className="list-group-item bg-transparent border-0 text-white">
-                                <i class="bi bi-facebook" style={{ fontSize: '5rem' }} ></i>
+                                <i className="bi bi-facebook" style={{ fontSize: '5rem' }} ></i>
                             </li>
                             <li className="list-group-item bg-transparent border-0 text-white">
-                                <i class="bi bi-instagram" style={{ fontSize: '5rem' }} ></i>
+                                <i className="bi bi-instagram" style={{ fontSize: '5rem' }} ></i>
                             </li>
                         </ul>
                     </Col>
 
                     <Col>
                         <h3 className='text-center'>Datos de Contacto</h3>
-                        <ul class="list-group text-center">
+                        <ul className="list-group text-center">
                             <li className="list-group-item bg-transparent border-0 text-white">
-                                <i class="bi bi-geo-alt" style={{ fontSize: '2rem' }} > Irarrazaval N°9999, Ñuñoa</i>
+                                <i className="bi bi-geo-alt" style={{ fontSize: '2rem' }} > Irarrazaval N°9999, Ñuñoa</i>
                             </li>
                             <li className="list-group-item bg-transparent border-0 text-white">
-                                <i class="bi bi-telephone-inbound" style={{ fontSize: '2rem' }} > Fono : 555-55-55</i>
+                                <i className="bi bi-telephone-inbound" style={{ fontSize: '2rem' }} > Fono : 555-55-55</i>
                             </li>
                             <li className="list-group-item bg-transparent border-0 text-white">
-                                <i class="bi bi-stopwatch" style={{ fontSize: '2rem' }} > Horarios : 09:00 - 18:00</i>
+                                <i className="bi bi-stopwatch" style={{ fontSize: '2rem' }} > Horarios : 09:00 - 18:00</i>
                             </li>
                         </ul>
                     </Col>

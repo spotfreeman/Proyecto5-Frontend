@@ -3,12 +3,13 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import { useNavigate } from 'react-router-dom';
+import { useContext, useState } from 'react';
 import UsersContext from '../context/UsersContext';
 
 export const SingUp = () => {
 
     const navigate = useNavigate()
-    const userCtx = UsersContext(UsersContext)
+    const userCtx = useContext(UsersContext)
     const { SingUp } = userCtx
     const [data, setData] = useState({
         nombre: '',

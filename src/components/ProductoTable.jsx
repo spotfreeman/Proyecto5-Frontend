@@ -1,8 +1,8 @@
 // Importaciones basicas
-
+import React from "react";
 import { useContext, useEffect, useState } from "react";
 import ProductoContext from "../context/Producto/ProductoContext";
-import React from "react";
+
 
 // Importaciones adicionales
 import Button from 'react-bootstrap/Button';
@@ -37,12 +37,15 @@ export const ProductoTable = () => {
                 </thead>
                 <tbody>
                     {
-                        productos.map(producto => (
-                            <tr key={producto._id}>
-                                <td>{producto.nombre}</td>
-                                <td>{producto.codigo}</td>
-                                <td>{producto.valor}</td>
-                            </tr>)
+                        productos.map((producto) => {
+                            return (
+                                <tr key={producto._id}>
+                                    <td>{producto.nombre}</td>
+                                    <td>{producto.codigo}</td>
+                                </tr>
+                            )
+                        }
+
                         )
                     }
                 </tbody>
