@@ -1,16 +1,15 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
 import { useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
-import UsersContext from '../context/UsersContext';
+import UsersContext from '../context/UsersContext.js';
 
 export const SingUp = () => {
 
     const navigate = useNavigate()
     const userCtx = useContext(UsersContext)
-    const { SingUp } = userCtx
+    const { singupUser } = userCtx
     const [data, setData] = useState({
         nombre: '',
         apellido: '',
@@ -22,14 +21,14 @@ export const SingUp = () => {
 
     const onChangeData = (event) => {
         setData({
-            ...DeviceOrientationEvent,
+            ...data,
             [event.target.name]: event.target.value
         })
     }
 
     const onSubmitData = (event) => {
         event.preventDefault()
-        const user = SingUp(data)
+        const user = singupUser(data)
         console.log(user)
         navigate('/')
     }

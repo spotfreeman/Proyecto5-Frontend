@@ -8,22 +8,20 @@ export const UserState = ({ children }) => {
     const initialState = {
         users: [
             {
-                id: 0,
+                id: '',
                 nombre: '',
                 apellido: '',
                 rut: '',
-                edad: 0,
-                correo: ''
+                correo: '',
             }
         ],
-        authState: false
+        authStatus: false
     }
-
     const [globalState, dispatch] = useReducer(reducer, initialState)
 
     const getUsers = async () => {
         try {
-            const response = await axiosClient.get('/api/v1/users')
+            const response = await axiosClient.get('/users')
             //console.log(response.data)
 
             dispatch({
@@ -42,8 +40,10 @@ export const UserState = ({ children }) => {
                 type: "REGISTRAR_USUARIO",
                 payload: response.data
             })
+            window.alert('Bienvenido!, usuario creado correctamente.')
         } catch (error) {
             console.log(error)
+            window.alert('Lo sentimos el usuario ya existe')
         }
     }
 
@@ -57,6 +57,7 @@ export const UserState = ({ children }) => {
                 }
             )
             console.log('Login exitoso.')
+            window.alert('Usuario Verificado!')
         } catch (error) {
             console.log(error)
         }
@@ -65,11 +66,12 @@ export const UserState = ({ children }) => {
     const verifyingToken = async () => {
         const token = localStorage.getItem('token')
         if (token) {
-            axiosClient.defaults.headers.common['Authorization'] = token
+            axiosClient.defaults.headers.common['authorization'] = token
         } else {
-            delete axiosClient.defaults.headers.common['Authorization']
+            delete axiosClient.defaults.headers.common['authorization']
         }
-        const response = await axiosClient.get('/veryfy-token')
+        const response = await axiosClient.get('/verify-token')
+
         dispatch({
             type: "OBTENER_USUARIO",
             payload: response.data
@@ -80,7 +82,7 @@ export const UserState = ({ children }) => {
         <UsersContext.Provider
             value={{
                 usersData: globalState.users,
-                Authorization: globalState.authStatus,
+                authStatus: globalState.authStatus,
                 getUsers,
                 singupUser,
                 loginUser,

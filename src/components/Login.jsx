@@ -1,17 +1,54 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 // Bootstaps
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
-
+import { useNavigate } from 'react-router-dom';
+import UsersContext from '../context/UsersContext'
 
 export const Login = () => {
+    const navigate = useNavigate()
+    const userCtx = useContext(UsersContext)
+
+    const
+        {
+            loginUser,
+            authStatus,
+            verifyingToken
+        } = userCtx
+
+    const [data, setData] = useState({
+        correo: '',
+        password: ''
+    })
+
+    useEffect(() => {
+        verifyingToken()
+
+        if (authStatus) {
+            navigate('/')
+        }
+        [authStatus]
+    })
+
+    const onChangeData = (event) => {
+        setData({
+            ...data,
+            [event.target.name]: event.target.value
+        })
+    }
+
+    const onSubmitData = (event) => {
+        event.preventDefault()
+        loginUser(data)
+    }
+
     return (
         <>
             <Card>
                 <div className="container">
-                    <Form>
+                    <Form onSubmit={(e) => { onSubmitData(e) }} >
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Usuario</Form.Label>
                             <Form.Control
@@ -37,15 +74,11 @@ export const Login = () => {
                         </Form.Group>
 
                         <Button variant="primary" type="submit">
-                            Submit
+                            Iniciar Sesion
                         </Button>
                     </Form>
-
                 </div>
-
             </Card>
-
-
         </>
     )
 }

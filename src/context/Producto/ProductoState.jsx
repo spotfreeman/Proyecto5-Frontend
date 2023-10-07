@@ -1,6 +1,6 @@
 import { useReducer } from 'react'
-import ProductoContext from './ProductoContext'
-import { ProductoReducer } from './ProductoReducer'
+import ProductoContext from './ProductoContext.js'
+import { ProductoReducer } from './ProductoReducer.js'
 import { axiosClient } from "../../config/api"
 
 export const ProductoState = ({ children }) => {
@@ -21,6 +21,8 @@ export const ProductoState = ({ children }) => {
                 // Siempre es .data
                 payload: response.data
             })
+            return response.data
+
         } catch (error) {
             //console.log(error)
         }
