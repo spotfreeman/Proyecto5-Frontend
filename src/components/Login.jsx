@@ -29,7 +29,7 @@ export const Login = () => {
         if (authStatus) {
             navigate('/')
         }
-        [authStatus]
+        [authStatus, verifyingToken, navigate]
     })
 
     const onChangeData = (event) => {

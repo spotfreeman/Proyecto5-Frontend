@@ -6,7 +6,7 @@ import { axiosClient } from "../config/api"
 export const UserState = ({ children }) => {
 
     const initialState = {
-        users: [
+        usersData: [
             {
                 id: '',
                 nombre: '',
@@ -78,6 +78,11 @@ export const UserState = ({ children }) => {
         })
     }
 
+    const logout = () => {
+        dispatch({
+            type: "CERRAR_SESION"
+        })
+    }
     return (
         <UsersContext.Provider
             value={{

@@ -14,7 +14,6 @@ export const SingUp = () => {
         nombre: '',
         apellido: '',
         rut: '',
-        edad: '',
         correo: '',
         password: ''
     })
@@ -89,18 +88,6 @@ export const SingUp = () => {
                                 </div>
 
                                 <div>
-                                    <label htmlFor="edad">Edad</label>
-                                    <div>
-                                        <input
-                                            type="number"
-                                            name="edad"
-                                            id="edad"
-                                            onChange={(e) => { onChangeData(e) }}
-                                            required />
-                                    </div>
-                                </div>
-
-                                <div>
                                     <label htmlFor="correo">Correo</label>
                                     <div>
                                         <input
@@ -145,12 +132,7 @@ export const SingUp = () => {
 
                     </Col>
                 </Row>
-
             </Container>
-
-
-
         </>
-
     )
 }

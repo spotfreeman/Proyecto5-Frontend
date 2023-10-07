@@ -36,8 +36,6 @@ export const HomePage = () => {
 
                 </Card.Body>
             </Card>
-
-            <UserList />
         </>
     )
 }
