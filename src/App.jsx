@@ -4,13 +4,10 @@ import { UserState } from './context/UserState'
 import { ProductoState } from './context/Producto/ProductoState'
 import { AppRouter } from './routes/AppRouter'
 
-import { NavBar } from './components/Navbar'
-import { Footer } from './components/Footer'
-
 function App() {
   return (
     <>
-      <NavBar />
+
 
       <UserState>
         <ProductoState>
@@ -18,7 +15,6 @@ function App() {
         </ProductoState>
       </UserState>
 
-      <Footer />
     </>
   )
 }

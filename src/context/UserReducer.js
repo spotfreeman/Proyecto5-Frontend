@@ -20,6 +20,7 @@ export const reducer = (globalState, action) => {
 
         case "OBTENER_USUARIOS":
             console.log('globalState', globalState)
+
             return {
                 ...globalState,
                 authStatus: true,
@@ -28,6 +29,7 @@ export const reducer = (globalState, action) => {
 
         case "CERRAR_SESION":
             localStorage.removeItem('token')
+
             return {
                 usersData: '',
                 authStatus: false

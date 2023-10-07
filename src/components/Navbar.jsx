@@ -1,42 +1,67 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+//import Navbar from 'react-bootstrap/Navbar';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
-import { Link, NavLink } from 'react-router-dom'
-import print from '../assets/img/impresora.png'
-import { useContext } from 'react';
-import UsersContext from '../context/UsersContext';
 
-export const NavBar = () => {
+import print from '../assets/img/impresora.png'
+
+import { Link, NavLink, Outlet } from 'react-router-dom'
+import { useContext } from 'react'
+import UsersContext from '../context/UsersContext'
+
+export const Navbar = () => {
 
     const userCtx = useContext(UsersContext)
     const { logout, authStatus, usersData } = userCtx
 
     return (
         <>
-            {
-                authStatus ?
-                    <>
-                        <Nav.Link as={NavLink} to="/contact" className='text-white'><h4>Contacto</h4></Nav.Link>
-                        {usersData?.nombre}
+            <div>
+                <ul>
+                    <li>
+                        <Image src={print} style={{ width: '10%' }} fluid />
+                    </li>
+                    <li>
+                        <Link to='/'>Inicio</Link>
+                    </li>
 
-                        <li onClick={() => logout()}>
-                            <Link to='/login'> Cerrar Sesion</Link>
-                        </li>
-                    </> :
-                    <>
-                        <li>
-                            <Link to='/signup'>Registro</Link>
-                        </li>
-                        <li>
-                            <Link to='/login'>Iniciar Sesion</Link>
-                        </li>
-                    </>
-            }
+                    {
+                        authStatus ?
+                            <>
+
+                                <li>
+                                    <Link to='/productos'>Productos</Link>
+                                </li>
+
+                                <li onClick={() => { logout() }}>
+                                    <Link to='/login'>
+                                        Cerrar Sesion
+                                    </Link>
+                                </li>
+                            </> :
+                            <>
+                                <li>
+                                    <Link to='/productos'>Productos</Link>
+                                </li>
+                                <li>
+                                    <Link to='/singup'>
+                                        Registro
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to='/login'>
+                                        Iniciar Sesion
+                                    </Link>
+                                </li>
+                            </>
+                    }
+                </ul>
+            </div>
+            <Outlet />
 
 
-
+            {/* 
             <Navbar sticky='top' expand="lg" className="bg-body-primary" bg='dark'>
                 <Container style={{ height: '100px' }}>
                     <Image src={print} style={{ width: '10%' }} fluid />
@@ -56,9 +81,9 @@ export const NavBar = () => {
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
-            </Navbar >
+            </Navbar > */}
         </>
     )
 }
 
-export default NavBar;
+export default Navbar;

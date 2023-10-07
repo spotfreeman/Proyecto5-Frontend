@@ -1,4 +1,7 @@
+// COMPONENTS
 import { SingUp } from "../components/SingUp"
+
+//BOOTSTRAP
 import Card from "react-bootstrap/Card"
 
 export const SingUpPage = () => {

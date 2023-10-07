@@ -22,7 +22,6 @@ export const UserState = ({ children }) => {
     const getUsers = async () => {
         try {
             const response = await axiosClient.get('/users')
-            //console.log(response.data)
 
             dispatch({
                 type: 'OBTENER_USUARIOS',
@@ -91,7 +90,8 @@ export const UserState = ({ children }) => {
                 getUsers,
                 singupUser,
                 loginUser,
-                verifyingToken
+                verifyingToken,
+                logout
             }}
         >{children}</UsersContext.Provider>
     )
