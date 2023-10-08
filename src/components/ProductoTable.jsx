@@ -1,14 +1,25 @@
+// ProductoTable.jsx
+
+//REACT
 import { useContext, useEffect, useState } from "react";
+
+//CONTEXT
 import ProductoContext from "../context/Producto/ProductoContext.js";
+
+// BOOTSTRAP
 import Card from "react-bootstrap/Card";
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
-import libreriaImagenes from '../assets/img/img.js'
 import { Container } from "react-bootstrap";
+
+//IMAGES
+import libreriaImagenes from '../assets/img/img.js'
+
+// PAYPAL
 import { PaypalButton } from "./Paypal/PaypalButton.jsx";
 
+//CODE
 export const ProductoTable = () => {
 
     const [productos, setProductos] = useState([]);
@@ -29,30 +40,6 @@ export const ProductoTable = () => {
 
     return (
         <>
-            {/* <table>
-                <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Codigo</th>
-                        <th>Valor</th>
-                        <th>Accion</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {productos.map(producto => {
-                        return (
-                            <tr key={producto._id}>
-                                <td>{producto.nombre}</td>
-                                <td>{producto.codigo}</td>
-                                <td>$ {producto.valor}</td>
-                                <td><button className="btn btn-primary">Comprar</button></td>
-                            </tr>
-                        );
-                    })}
-                </tbody>
-            </table> */}
-
-
             <Container>
                 <div>
                     <Row className="justify-content-md-center">
@@ -72,6 +59,7 @@ export const ProductoTable = () => {
                     </Row>
                 </div>
             </Container>
+
             <Container>
                 <Row className="justify-content-md-center">
                     <Col>

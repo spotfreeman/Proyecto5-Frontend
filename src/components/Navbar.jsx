@@ -1,38 +1,54 @@
+// Navbar.jsx
+// REACT
+import { Link, NavLink, Outlet } from 'react-router-dom'
+import { useContext } from 'react'
+
+//CONTEXT
+import UsersContext from '../context/UsersContext'
+
+//BOOTSTAP
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 //import Navbar from 'react-bootstrap/Navbar';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 
+//IMAGES
 import print from '../assets/img/impresora.png'
 
-import { Link, NavLink, Outlet } from 'react-router-dom'
-import { useContext } from 'react'
-import UsersContext from '../context/UsersContext'
-
+//CODE
 export const Navbar = () => {
 
     const userCtx = useContext(UsersContext)
     const { logout, authStatus, usersData } = userCtx
+    console.log(userCtx)
 
     return (
         <>
             <div>
                 <ul>
+                    <h2>[3D]Print</h2>
+                    <Nav.Link as={NavLink} to="/" className='text-white'><h4>Home</h4></Nav.Link>
                     <li>
                         <Image src={print} style={{ width: '10%' }} fluid />
                     </li>
                     <li>
-                        <Link to='/'>Inicio</Link>
+                        <Link to='/'>Inicio { } </Link>
                     </li>
 
                     {
                         authStatus ?
                             <>
+                                <li>
+                                    <h3>Nombre : (Pendiente)</h3>
+                                </li>
 
                                 <li>
                                     <Link to='/productos'>Productos</Link>
+
                                 </li>
+
+                                <Nav.Link as={NavLink} to='/singup' className='text-white'><Button variant="primary" size='lg' onClick={() => { logout() }}>Cerrar Sesion</Button>{' '}</Nav.Link>
 
                                 <li onClick={() => { logout() }}>
                                     <Link to='/login'>
@@ -43,6 +59,7 @@ export const Navbar = () => {
                             <>
                                 <li>
                                     <Link to='/productos'>Productos</Link>
+                                    <Nav.Link as={NavLink} to="/productos" className='text-white'><h4>Productos</h4></Nav.Link>
                                 </li>
                                 <li>
                                     <Link to='/singup'>
@@ -54,6 +71,9 @@ export const Navbar = () => {
                                         Iniciar Sesion
                                     </Link>
                                 </li>
+                                <Nav.Link as={NavLink} to='/login' className='text-white'><Button variant="danger" size='lg'>Login</Button>{' '}</Nav.Link>
+                                <Nav.Link as={NavLink} to='/singup' className='text-white'><Button variant="primary" size='lg'>Registro</Button>{' '}</Nav.Link>
+
                             </>
                     }
                 </ul>

@@ -1,3 +1,5 @@
+//AppRouter.jsx
+// REACT
 import { Navigate, Route, Routes } from 'react-router-dom'
 
 //Pages
@@ -10,14 +12,13 @@ import { PrivateRoute } from './PrivateRouter';
 import { ShoppingPage } from '../pages/ShoppingPage';
 
 //Componentes
-import { Navbar } from '../components/Navbar'
+import { NavbarComponent } from "../components/NavbarComponent";
 
 export const AppRouter = () => {
     return (
         <>
             <Routes>
-
-                <Route path='/' element={<Navbar />}>
+                <Route path='/' element={<NavbarComponent />}>
                     <Route index element={<HomePage />} />
                     <Route path='productos' element={<ProductosPage />} />
                     <Route path='contact' element={<ContactPage />} />
@@ -31,10 +32,7 @@ export const AppRouter = () => {
                             </PrivateRoute>
                         }
                     />
-
-
                     <Route path='*' element={<Navigate to='/login' />} />
-
                 </Route>
             </Routes>
         </>

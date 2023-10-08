@@ -28,7 +28,7 @@ export const Login = () => {
         verifyingToken()
 
         if (authStatus) {
-            navigate('/')
+            navigate('/productos')
         }
         [authStatus, verifyingToken, navigate]
     })

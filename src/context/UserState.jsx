@@ -42,7 +42,6 @@ export const UserState = ({ children }) => {
             window.alert('Bienvenido!, usuario creado correctamente.')
         } catch (error) {
             console.log(error)
-            window.alert('Lo sentimos el usuario ya existe')
         }
     }
 
