@@ -28,11 +28,31 @@ export const ProductoState = ({ children }) => {
         }
     }
 
+
+    const unProducto = async (dataForm) => {
+        try {
+            const response = await axiosClient.get('/productos/:id', dataForm)
+            dispatch(
+                {
+                    type: 'OBTENER_UN_PRODUCTO',
+                    payload: response.data
+                }
+            )
+            console.log(response)
+        } catch (error) {
+            console.log(error)
+        }
+
+    }
+
+
+
     return (
         <ProductoContext.Provider
             value={{
                 productos: globalState.productos,
-                getProductos
+                getProductos,
+                unProducto
             }}
         >
             {children}

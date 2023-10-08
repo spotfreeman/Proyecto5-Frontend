@@ -7,6 +7,12 @@ export const ProductoReducer = (globalState, action) => {
                 newProducto: action.payload
             }
 
+        case 'OBTENER_UN_PRODUCTO':
+            return {
+                ...globalState,
+                newProducto: action.payload
+            }
+
         default:
             return globalState;
     }

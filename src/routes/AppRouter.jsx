@@ -13,6 +13,7 @@ import { ShoppingPage } from '../pages/ShoppingPage';
 
 //COMPONENTS
 import { NavbarComponent } from "../components/NavbarComponent";
+import { ProdPage } from '../pages/ProdPage';
 
 export const AppRouter = () => {
     return (
@@ -24,6 +25,7 @@ export const AppRouter = () => {
                     <Route path='contact' element={<ContactPage />} />
                     <Route path='singup' element={<SingUpPage />} />
                     <Route path='login' element={<LoginPage />} />
+                    <Route path='prod' element={<ProdPage />} />
                     <Route
                         path='productos/*'
                         element={

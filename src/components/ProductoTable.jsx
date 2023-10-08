@@ -56,8 +56,8 @@ export const ProductoTable = () => {
                                             <Container className='text-center'>
 
                                                 <Image
-                                                    // src={libreriaImagenes[1].img}
-                                                    src={prod.img}
+                                                    src={libreriaImagenes[1].img}
+                                                    // src={prod.img}
                                                     alt={prod.codigo}
 
                                                     //alt={libreriaImagenes[1].alt}

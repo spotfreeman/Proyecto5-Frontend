@@ -47,7 +47,7 @@ export const Login = () => {
     }
 
     return (
-        < >
+        <>
             <Card className="fondo">
                 <Container >
                     <div style={{ height: '200px' }}></div>
@@ -88,8 +88,9 @@ export const Login = () => {
                             </Form>
                         </div>
                     </Card>
-
                 </Container>
+
+
                 <Container >
                     <div style={{ height: '500px' }}></div>
                 </Container>
