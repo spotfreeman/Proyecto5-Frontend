@@ -16,6 +16,9 @@ import { Container } from "react-bootstrap";
 //IMAGES
 import libreriaImagenes from '../assets/img/img.js'
 
+import img001 from '../assets/img/portal.jpg'
+import img002 from '../assets/img/setrol.jpg'
+
 // PAYPAL
 import { PaypalButton } from "./Paypal/PaypalButton.jsx";
 
