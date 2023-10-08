@@ -2,7 +2,7 @@
 // REACT
 import { Navigate, Route, Routes } from 'react-router-dom'
 
-//Pages
+//PAGES
 import { HomePage } from "../pages/HomePage";
 import { ProductosPage } from '../pages/ProductosPage';
 import { ContactPage } from '../pages/ContactPage';
@@ -11,7 +11,7 @@ import { LoginPage } from '../pages/LoginPage';
 import { PrivateRoute } from './PrivateRouter';
 import { ShoppingPage } from '../pages/ShoppingPage';
 
-//Componentes
+//COMPONENTS
 import { NavbarComponent } from "../components/NavbarComponent";
 
 export const AppRouter = () => {

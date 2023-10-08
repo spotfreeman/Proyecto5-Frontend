@@ -47,10 +47,13 @@ export const ProductoTable = () => {
                             return (
                                 <Col>
                                     <Card key={prod._id} style={{ width: '22rem' }} className="p-2 m-2">
-                                        <h2><img src={libreriaImagenes[2].img} alt="" style={{ width: '80%', borderRadius: '10px' }} /></h2>
-                                        <Card.Title>{prod.nombre}</Card.Title>
-                                        <Card.Text>{prod.codigo}</Card.Text>
-                                        <Card.Text>{prod.valor}</Card.Text>
+
+                                        <h2><img src={libreriaImagenes[prod.img].img} alt="" style={{ width: '80%', borderRadius: '10px' }} /></h2>
+                                        <Card.Title>Nombre : {prod.nombre}</Card.Title>
+                                        <Card.Text>Cod : {prod.codigo}</Card.Text>
+                                        <Card.Text>Valor : $ {prod.valor}</Card.Text>
+                                        <Card.Text>Img : {prod.img}</Card.Text>
+                                        <Button variant="primary">Detalle</Button>
                                         <Button variant="warning">Comprar</Button>
                                     </Card>
                                 </Col>
