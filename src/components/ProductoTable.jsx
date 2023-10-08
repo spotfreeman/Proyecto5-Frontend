@@ -37,7 +37,7 @@ export const ProductoTable = () => {
         setProductos(data);
     };
 
-    const imagen = 4
+
 
     useEffect(() => {
         getAllProductos();
@@ -46,50 +46,44 @@ export const ProductoTable = () => {
     return (
         <>
             <Container>
-                <div>
-                    <Row className="justify-content-md-center">
-                        {productos.map(prod => {
-                            return (
-                                <Col>
-                                    <Card key={prod._id} style={{ width: '30rem', backgroundColor: '#E3F9E7' }} className="p-2 m-2">
-                                        <Container className='text-center'>
-                                            <Image
-                                                src={libreriaImagenes[imagen].img}
-                                                alt={libreriaImagenes[0].alt}
-                                                style={{ width: '100%', borderRadius: '10px' }}
-                                                fluid
-                                            />
+                <Container>
+                    <div>
+                        <Row className="justify-content-md-center">
+                            {productos.map(prod => {
+                                return (
+                                    <Col>
+                                        <Card key={prod._id} style={{ width: '30rem', backgroundColor: '#E3F9E7' }} className="p-2 m-2">
+                                            <Container className='text-center'>
 
-                                            {/*
-                                            <h2><img src={libreriaImagenes[imagen].img} alt="" style={{ width: '100%', borderRadius: '10px' }} /></h2> */}
-                                        </Container>
-                                        <Card.Title className='text-center'> {prod.nombre}</Card.Title>
-                                        <Card.Text>Cod : {prod.codigo}</Card.Text>
-                                        <Card.Text>Descripcion : {prod.descripcion} </Card.Text>
-                                        <Card.Text className='text-center'>Valor : $ {prod.valor}</Card.Text>
-                                        <Card.Text>Img : {prod.img}</Card.Text>
-                                        <Button variant="primary">Detalle</Button>
-                                        <Button variant="warning">Comprar</Button>
-                                    </Card>
-                                </Col>
-                            )
-                        })}
-                    </Row>
-                </div>
-            </Container>
+                                                <Image
+                                                    // src={libreriaImagenes[1].img}
+                                                    src={prod.img}
+                                                    alt={prod.codigo}
 
-            <Container>
-                <Row className="justify-content-md-center">
-                    <Col>
+                                                    //alt={libreriaImagenes[1].alt}
+                                                    style={{ width: '100%', borderRadius: '10px' }}
+                                                    fluid
+                                                />
+                                            </Container>
+                                            <Card.Title className='text-center'> {prod.nombre}</Card.Title>
+                                            <Card.Text>Cod : {prod.codigo}</Card.Text>
+                                            <Card.Text>Descripcion : {prod.descripcion} </Card.Text>
+                                            <Card.Text className='text-center'>Valor : $ {prod.valor}</Card.Text>
+                                            <Card.Text>Img : {prod.img}</Card.Text>
+                                            <Button variant="primary">Detalle</Button>
+                                            <Button variant="warning">Comprar</Button>
+                                        </Card>
+                                    </Col>
+                                )
+                            })}
+                        </Row>
+                    </div>
+                </Container>
 
-                    </Col>
-                    <Col>
-                        <PaypalButton />
-                    </Col>
-                    <Col>
 
-                    </Col>
-                </Row>
+                <Container>
+                    <PaypalButton />
+                </Container>
             </Container>
         </>
     );
