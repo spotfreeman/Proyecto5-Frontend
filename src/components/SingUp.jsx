@@ -1,9 +1,11 @@
+
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import { useNavigate } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import UsersContext from '../context/UsersContext.js';
+import Card from 'react-bootstrap/Card';
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button';
 
 export const SingUp = () => {
 
@@ -34,105 +36,86 @@ export const SingUp = () => {
 
     return (
         <>
-            <Container>
-                <Row className="justify-content-md-center" style={{ height: '100px' }}>
-                    <Col xs lg="2" bg='black' >
-                    </Col>
-                    <Col md="auto"></Col>
-                    <Col xs lg="2">
-                    </Col>
-                </Row>
+            <Card className='fondo'>
+                <Container >
+                    <div style={{ height: '100px' }}></div>
+                </Container>
+                <Container>
+                    <Container style={{ width: '500px', padding: '10px' }}>
+                        <Form onSubmit={(e) => { onSubmitData(e) }}>
+                            <Form.Group className="mb-3 text-center" controlId="nombre">
+                                <Form.Label style={{ padding: '5px' }}><h3>Nombre</h3></Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    name="nombre"
+                                    id="nombre"
+                                    placeholder="Nombre"
+                                    onChange={(e) => { onChangeData(e) }}
+                                    required
+                                />
+                            </Form.Group>
 
-                <Row className="justify-content-md-center">
-                    <Col xs lg="2">
+                            <Form.Group className="mb-3 text-center" controlId="apellido">
+                                <Form.Label style={{ padding: '5px' }}><h3>Apellido</h3></Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    name="apellido"
+                                    id="apellido"
+                                    placeholder="Apellido"
+                                    onChange={(e) => { onChangeData(e) }}
+                                    required
+                                />
+                            </Form.Group>
 
-                    </Col>
-                    <Col md="auto">
+                            <Form.Group className="mb-3 text-center" controlId="rut">
+                                <Form.Label style={{ padding: '5px' }}><h3>Rut</h3></Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    name="rut"
+                                    id="rut"
+                                    placeholder="12345678-0"
+                                    onChange={(e) => { onChangeData(e) }}
+                                    required
+                                />
+                            </Form.Group>
 
-                        <div className="d-flex justify-content-center align-items-center">
-                            <form onSubmit={(e) => { onSubmitData(e) }}>
-                                <div>
-                                    <label htmlFor="nombre">Nombre</label>
-                                    <div>
-                                        <input
-                                            type="text"
-                                            name="nombre"
-                                            id="nombre"
-                                            onChange={(e) => { onChangeData(e) }}
-                                            required />
-                                    </div>
-                                </div>
+                            <Form.Group className="mb-3 text-center" controlId="correo">
+                                <Form.Label style={{ padding: '5px' }}><h3>Correo</h3></Form.Label>
+                                <Form.Control
+                                    type="email"
+                                    name="correo"
+                                    id="correo"
+                                    placeholder="nombre@empresa.com"
+                                    onChange={(e) => { onChangeData(e) }}
+                                    required
+                                />
+                            </Form.Group>
 
-                                <div>
-                                    <label htmlFor="apellido">Apellido</label>
-                                    <div>
-                                        <input
-                                            type="text"
-                                            name="apellido"
-                                            id="apellido"
-                                            onChange={(e) => { onChangeData(e) }}
-                                            required />
-                                    </div>
-                                </div>
+                            <Form.Group className="mb-3 text-center" controlId="password">
+                                <Form.Label style={{ padding: '5px' }}><h3>Password</h3></Form.Label>
+                                <Form.Control
+                                    type="password"
+                                    name="password"
+                                    id="password"
+                                    placeholder="password"
+                                    onChange={(e) => { onChangeData(e) }}
+                                    required
+                                />
+                            </Form.Group>
 
-                                <div>
-                                    <label htmlFor="rut">Rut</label>
-                                    <div>
-                                        <input
-                                            type="text"
-                                            name="rut"
-                                            id="rut"
-                                            onChange={(e) => { onChangeData(e) }}
-                                            required />
-                                    </div>
-                                </div>
+                            <Container className='text-center'>
+                                <Button style={{ margin: '10px', width: '200px' }} variant="primary" type="submit">
+                                    Registrarme!
+                                </Button>
+                            </Container>
+                        </Form>
+                    </Container>
+                </Container>
 
-                                <div>
-                                    <label htmlFor="correo">Correo</label>
-                                    <div>
-                                        <input
-                                            type="email"
-                                            name="correo"
-                                            id="correo"
-                                            onChange={(e) => { onChangeData(e) }}
-                                            required />
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label htmlFor="password">Password</label>
-                                    <div>
-                                        <input
-                                            type="password"
-                                            name="password"
-                                            id="password"
-                                            onChange={(e) => { onChangeData(e) }}
-                                            required />
-                                    </div>
-                                </div>
-                                <div style={{ height: '25px' }}></div>
-                                <div className="d-flex justify-content-center align-items-center text-center">
-                                    <button className="btn btn-primary" type="submit">Registrame</button>
-                                </div>
-                            </form>
-                        </div>
-
-                    </Col>
-                    <Col xs lg="2" >
-
-                    </Col>
-                </Row>
-
-                <Row className="justify-content-md-center" style={{ height: '100px' }}>
-                    <Col xs lg="2">
-
-                    </Col>
-                    <Col md="auto" >Recuerda completar tus datos de registro correctamente.</Col>
-                    <Col xs lg="2">
-
-                    </Col>
-                </Row>
-            </Container>
+                <Container >
+                    <div style={{ height: '500px' }}></div>
+                </Container>
+            </Card>
         </>
     )
 }

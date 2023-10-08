@@ -15,3 +15,10 @@ body {
     background-repeat: no-repeat;
     background-position-y: center;
 }
+
+.fondo {
+    background-image: url("./assets/img/DSC02989.jpg");
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position-y: center;
+}
