@@ -46,6 +46,7 @@ export const Navbar = () => {
                                 <li>
                                     <Link to='/productos'>Productos</Link>
 
+
                                 </li>
 
                                 <Nav.Link as={NavLink} to='/singup' className='text-white'><Button variant="primary" size='lg' onClick={() => { logout() }}>Cerrar Sesion</Button>{' '}</Nav.Link>
@@ -59,6 +60,7 @@ export const Navbar = () => {
                             <>
                                 <li>
                                     <Link to='/productos'>Productos</Link>
+                                    <Link to='/solicitud'>Solicitud</Link>
                                     <Nav.Link as={NavLink} to="/productos" className='text-white'><h4>Productos</h4></Nav.Link>
                                 </li>
                                 <li>

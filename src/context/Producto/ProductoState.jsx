@@ -42,7 +42,6 @@ export const ProductoState = ({ children }) => {
         } catch (error) {
             console.log(error)
         }
-
     }
 
 

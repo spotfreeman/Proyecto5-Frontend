@@ -81,6 +81,18 @@ export const UserState = ({ children }) => {
             type: "CERRAR_SESION"
         })
     }
+
+    const perfilUsuario = () => {
+
+    }
+
+
+    const eliminarUsuario = () => {
+
+    }
+
+
+
     return (
         <UsersContext.Provider
             value={{
