@@ -3,6 +3,8 @@ import UsersContext from "../context/UsersContext"
 import SolicitudContext from "../context/Solicitud/SolicitudContext"
 
 export const SolicitudForm = () => {
+
+
     const solicitudCtx = useContext(SolicitudContext)
     const { nuevaSolicitud } = solicitudCtx
     const [data, setData] = useState({

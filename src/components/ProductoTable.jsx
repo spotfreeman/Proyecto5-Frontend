@@ -37,8 +37,6 @@ export const ProductoTable = () => {
         setProductos(data);
     };
 
-
-
     useEffect(() => {
         getAllProductos();
     }, []);
@@ -70,8 +68,8 @@ export const ProductoTable = () => {
                                             <Card.Text>Descripcion : {prod.descripcion} </Card.Text>
                                             <Card.Text className='text-center'>Valor : $ {prod.valor}</Card.Text>
                                             <Card.Text>Img : {prod.img}</Card.Text>
-                                            <Button variant="primary">Detalle</Button>
-                                            <Button variant="warning">Comprar</Button>
+                                            <Button variant="primary" value=''>Detalle</Button>
+                                            <Button variant="warning" value=''>Comprar</Button>
                                         </Card>
                                     </Col>
                                 )
