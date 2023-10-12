@@ -29,9 +29,9 @@ export const ProductoState = ({ children }) => {
     }
 
 
-    const unProducto = async (dataForm) => {
+    const unProducto = async (id) => {
         try {
-            const response = await axiosClient.get('/productos/:id', dataForm)
+            const response = await axiosClient.get(`/productos/${id}`)
             dispatch(
                 {
                     type: 'OBTENER_UN_PRODUCTO',

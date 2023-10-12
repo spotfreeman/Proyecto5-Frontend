@@ -30,16 +30,19 @@ export const ProductoTable = () => {
     // globalContext se suele utilizar ctx
     const globalContext = useContext(ProductoContext);
 
-    const { getProductos } = globalContext;
+    const { getProductos, unProducto } = globalContext;
 
     const getAllProductos = async () => {
         const data = await getProductos()
+        console.log(data)
         setProductos(data);
     };
 
     useEffect(() => {
         getAllProductos();
     }, []);
+
+
 
     return (
         <>
@@ -68,8 +71,8 @@ export const ProductoTable = () => {
                                             <Card.Text>Descripcion : {prod.descripcion} </Card.Text>
                                             <Card.Text className='text-center'>Valor : $ {prod.valor}</Card.Text>
                                             <Card.Text>Img : {prod.img}</Card.Text>
-                                            <Button variant="primary" value=''>Detalle</Button>
-                                            <Button variant="warning" value=''>Comprar</Button>
+                                            <Button variant="primary" onClick={() => { unProducto(prod.id) }} >Detalle</Button>
+                                            <Button variant="warning">Comprar</Button>
                                         </Card>
                                     </Col>
                                 )
