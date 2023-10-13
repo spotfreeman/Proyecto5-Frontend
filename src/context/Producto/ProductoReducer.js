@@ -13,6 +13,20 @@ export const ProductoReducer = (globalState, action) => {
                 newProducto: action.payload
             }
 
+        // Nuevo codigo
+        case 'GET_ONE_PRODUCT':
+            return {
+                ...globalState,
+                newProducto: action.payload
+            }
+
+        case 'DELETE_PRODUCT':
+            return {
+                ...globalState,
+                newProducto: action.payload
+            }
+
+
         default:
             return globalState;
     }

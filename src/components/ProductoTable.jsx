@@ -71,7 +71,7 @@ export const ProductoTable = () => {
                                             <Card.Text>Descripcion : {prod.descripcion} </Card.Text>
                                             <Card.Text className='text-center'>Valor : $ {prod.valor}</Card.Text>
                                             <Card.Text>Img : {prod.img}</Card.Text>
-                                            <Button variant="primary" onClick={() => { unProducto(prod.id) }} >Detalle</Button>
+                                            <Button variant="primary" onClick={() => (unProducto(prod.id))} >Detalle</Button>
                                             <Button variant="warning">Comprar</Button>
                                         </Card>
                                     </Col>

@@ -38,8 +38,6 @@ export const NavbarComponent = () => {
                                             <Nav.Link as={NavLink} to="/contact" className='text-white'><h4>Contactar</h4></Nav.Link>
                                         </Nav>
                                         <Nav>
-                                            <Nav.Link as={NavLink} className='text-white'><Button variant="success" disabled>Login</Button>{' '}</Nav.Link>
-                                            <Nav.Link as={NavLink} className='text-white'><Button variant="primary" disabled>Registro</Button>{' '}</Nav.Link>
                                             <Nav.Link as={NavLink} to='/' className='text-white'><Button variant="warning" onClick={() => logout()} >Cerrar Sesion</Button>{' '}</Nav.Link>
                                         </Nav>
                                     </> :
@@ -47,6 +45,7 @@ export const NavbarComponent = () => {
                                         <Nav className="me-auto">
                                             <Nav.Link as={NavLink} to="/" className='text-white'><h4>Home</h4></Nav.Link>
                                             <Nav.Link as={NavLink} to="/productos" className='text-white'><h4>Productos</h4></Nav.Link>
+                                            <Nav.Link as={NavLink} to="/products" className='text-white'><h4>Products NEW</h4></Nav.Link>
 
                                         </Nav>
                                         <Nav>

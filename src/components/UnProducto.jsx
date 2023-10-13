@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
 import ProductoContext from "../context/Producto/ProductoContext"
 
 import Button from "react-bootstrap/Button"
@@ -7,10 +6,10 @@ import Container from "react-bootstrap/Container"
 
 
 export const UnProducto = () => {
-    const navigate = useNavigate()
+
     const productoCtx = useContext(ProductoContext)
 
-    const { producto } = productoCtx
+    const { product } = productoCtx
 
     const [data, setData] = useState({
         nombre: '',
