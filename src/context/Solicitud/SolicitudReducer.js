@@ -1,5 +1,6 @@
 export const SolicitudReducer = (globalState, action) => {
     switch (action.type) {
+
         case 'OBTENER_SOLICITUDES':
             return {
                 ...globalState,
@@ -7,6 +8,11 @@ export const SolicitudReducer = (globalState, action) => {
             }
 
         case 'NUEVA_SOLICITUD':
+            return {
+                ...globalState
+            }
+
+        case 'DELETE_SOLICITUD':
             return {
                 ...globalState
             }

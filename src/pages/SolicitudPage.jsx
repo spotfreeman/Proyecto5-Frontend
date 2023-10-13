@@ -10,12 +10,6 @@ export const SolicitudPage = () => {
             </Container>
 
             <Container>
-                <h2>Ingresar Solicitud</h2>
-                <SolicitudForm />
-            </Container>
-
-
-            <Container>
                 <h2>Listado de Solicitudes</h2>
                 <SolicitudTable />
             </Container>

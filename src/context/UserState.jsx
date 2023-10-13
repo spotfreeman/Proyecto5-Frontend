@@ -82,16 +82,6 @@ export const UserState = ({ children }) => {
         })
     }
 
-    const perfilUsuario = () => {
-
-    }
-
-
-    const eliminarUsuario = () => {
-
-    }
-
-
 
     return (
         <UsersContext.Provider

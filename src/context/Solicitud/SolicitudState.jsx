@@ -1,34 +1,47 @@
 import { useReducer } from "react"
-import { SolicitudReducer } from "./SolicitudReducer"
+import SolicitudContext from "./SolicitudContext.js"
+import { SolicitudReducer } from "./SolicitudReducer.js"
 import { axiosClient } from "../../config/api"
-import SolicitudContext from "./SolicitudContext"
-
 
 export const SolicitudState = ({ children }) => {
     const initialState = {
-        solicitud: []
+        solicitudes: [],
     }
 
     const [globalState, dispatch] = useReducer(SolicitudReducer, initialState)
 
-    const getAllSolicitudes = async () => {
+    const getSolicitud = async () => {
         try {
-            const response = await axiosClient.get('/solicitud')
+            const response = await axiosClient.get('/solicitudes')
+
             dispatch({
                 type: 'OBTENER_SOLICITUDES',
                 payload: response.data
             })
             return response.data
+
         } catch (error) {
 
         }
     }
 
-    const nuevaSolicitud = async (dataForm) => {
+    const nuevaSolicitud = async (id) => {
         try {
-            const response = await axiosClient.post('/solicitud', dataForm)
+            const response = await axiosClient.post('/solicitudes', id)
             dispatch({
                 type: 'NUEVA_SOLICITUD',
+                payload: response.data
+            })
+        } catch (error) {
+
+        }
+    }
+
+    const deleteSolicitud = async (id) => {
+        try {
+            const response = await axiosClient.delete(`/solicitud/${id}`)
+            dispatch({
+                type: 'DELETE_SOLICITUD',
                 payload: response.data
             })
         } catch (error) {
@@ -39,9 +52,10 @@ export const SolicitudState = ({ children }) => {
     return (
         <SolicitudContext.Provider
             value={{
-                solicitud: globalState.solicitud,
-                getAllSolicitudes,
-                nuevaSolicitud
+                solicitudes: globalState.solicitudes,
+                getSolicitud,
+                nuevaSolicitud,
+                deleteSolicitud
 
             }}>
             {children}

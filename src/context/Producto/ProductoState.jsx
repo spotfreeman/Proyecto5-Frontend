@@ -1,9 +1,12 @@
-import { useReducer } from 'react'
+import { useReducer, useState } from 'react'
 import ProductoContext from './ProductoContext.js'
 import { ProductoReducer } from './ProductoReducer.js'
 import { axiosClient } from "../../config/api"
 
 export const ProductoState = ({ children }) => {
+    const [product, setProduct] = useState([])
+
+
     const initialState = {
         productos: [],
     }
@@ -46,7 +49,6 @@ export const ProductoState = ({ children }) => {
 
 
     // Probando nuevo codigo GET
-
     const getProducts = async () => {
         try {
             const response = await axiosClient.get('/productos')
@@ -61,9 +63,10 @@ export const ProductoState = ({ children }) => {
             return response.data
 
         } catch (error) {
-            //console.log(error)
+
         }
     }
+
     const getOneProduct = async (id) => {
         try {
             const response = await axiosClient.get(`/productos/${id}`)
@@ -72,6 +75,8 @@ export const ProductoState = ({ children }) => {
                 payload: response.data
             }
             )
+            setProduct(response.data)
+
             console.log(response)
         } catch (error) {
 
@@ -89,7 +94,8 @@ export const ProductoState = ({ children }) => {
                 unProducto,
                 //Nuevos GETS
                 getProducts,
-                getOneProduct
+                getOneProduct,
+                product
             }}
         >
             {children}

@@ -1,10 +1,14 @@
 import React from 'react'
-import { UnProducto } from '../components/UnProducto'
+import { ProductDetail } from '../components/Productos/ProductDetail'
 
 export const ProdPage = () => {
+
+
+
+
     return (
         <>
-            <UnProducto />
+            <ProductDetail />
         </>
     )
 }
