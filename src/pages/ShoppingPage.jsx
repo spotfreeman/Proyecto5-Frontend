@@ -9,7 +9,7 @@ export const ShoppingPage = () => {
             <div className="container">
                 <div className="row">
                     <div className="col">
-                        <PaypalButton invoice={'Producto01 , Producto02'} totalValue={'20.99'} />
+                        <PaypalButton invoice={'Producto01'} totalValue={'20.99'} />
                     </div>
                 </div>
             </div>

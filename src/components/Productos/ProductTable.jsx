@@ -42,15 +42,15 @@ export const ProductTable = () => {
                                 return (
                                     <div key={prod._id}>
                                         <Card className="p-2 m-2">
-                                            <Card.Title className="text-center">
+                                            <Card.Title className="text-center" style={{ backgroundColor: '#E3F9E7' }}>
                                                 <h3>{prod.nombre} </h3>
                                             </Card.Title>
                                             <Card.Body>
                                                 <Row>
-                                                    <Col>
+                                                    <Col className="text-center">
                                                         <img src={print} alt="Imagen de DB" height='300' />
                                                     </Col>
-                                                    <Col className="text-center">
+                                                    <Col className="text-center" style={{ backgroundColor: '#E3F9E7' }}>
                                                         <h3>{prod.material}</h3>
                                                         <h3>$ {prod.valor}</h3>
                                                     </Col>

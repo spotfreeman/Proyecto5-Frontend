@@ -40,8 +40,8 @@ export const SingUp = () => {
                 <Container >
                     <div style={{ height: '100px' }}></div>
                 </Container>
-                <Container>
-                    <Container style={{ width: '500px', padding: '10px' }}>
+                <Container style={{ backgroundColor: '#E3F9E7', width: '600px' }}>
+                    <Container style={{ width: '500px', padding: '16px' }}>
                         <Form onSubmit={(e) => { onSubmitData(e) }}>
                             <Form.Group className="mb-3 text-center" controlId="nombre">
                                 <Form.Label style={{ padding: '5px' }}><h3>Nombre</h3></Form.Label>

@@ -5,6 +5,7 @@ import { Card, Col, Container, Row, Image } from 'react-bootstrap'
 
 
 import print from '../../assets/img/logos/impresora.png'
+import { PaypalButton } from '../Paypal/PaypalButton'
 
 
 export const ProductDetail = () => {
@@ -31,8 +32,7 @@ export const ProductDetail = () => {
                     <Card.Text>
 
                         <Row>
-                            <Col className='text-center'>
-                                <h1>IMAGEN DE PRODUCTO</h1>
+                            <Col className='text-center' >
                                 <Image className='align-me' src={print} style={{ width: '100%' }} fluid />
                             </Col>
 
@@ -58,6 +58,7 @@ export const ProductDetail = () => {
 
                                     <Container>
                                         <h3>BOTON DE PAYPAL</h3>
+                                        <PaypalButton />
                                     </Container>
                                 </Row>
                             </Col>
