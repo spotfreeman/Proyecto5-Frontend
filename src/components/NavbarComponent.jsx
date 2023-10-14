@@ -40,6 +40,7 @@ export const NavbarComponent = () => {
                                         </Nav>
                                         <Nav>
                                             <Nav.Link as={NavLink} to='/' className='text-white'><Button variant="warning" onClick={() => logout()} >Cerrar Sesion</Button>{' '}</Nav.Link>
+                                            <Nav.Link as={NavLink} to='/singup' className='text-white'><Button variant="warning">Registro</Button>{' '}</Nav.Link>
                                         </Nav>
                                     </> :
                                     <>
@@ -50,7 +51,7 @@ export const NavbarComponent = () => {
                                         </Nav>
                                         <Nav>
                                             <Nav.Link as={NavLink} to='/login' className='text-white'><Button variant="danger">Login</Button>{' '}</Nav.Link>
-                                            <Nav.Link as={NavLink} to='/singup' className='text-white'><Button variant="warning">Registro</Button>{' '}</Nav.Link>
+
                                         </Nav>
                                     </>}
                         </Navbar.Collapse>
