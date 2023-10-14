@@ -4,7 +4,7 @@ import image01 from './usuario/hombre.png'
 import image02 from './usuario/mujer.png'
 
 //IMAGENES LOGO
-import print from '../img/logos/Impresora.png'
+import print from '../img/logos/impresora.png'
 
 //IMAGENES PRODUCTOS
 import img001 from './productos/img001.jpg'
