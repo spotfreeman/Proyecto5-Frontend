@@ -23,8 +23,8 @@ export const HomePage = () => {
 
                         <Col>
                             <h2 style={{ fontSize: '80px' }}>Mi nombre es</h2>
-                            <h2 style={{ fontSize: '80px' }}>Raul</h2>
-                            <h2 style={{ fontSize: '80px' }}>Oyarzun</h2>
+                            <h2 style={{ fontSize: '80px' }}>Raúl</h2>
+                            <h2 style={{ fontSize: '80px' }}>Oyarzún</h2>
                             <h2 className='text-center'>Estudiante autodidacta y fanatico de las tecnologias, y podre ayudarte en tu incursion en tus hobbys.</h2>
                         </Col>
                     </Row>

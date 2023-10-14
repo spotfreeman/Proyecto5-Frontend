@@ -47,7 +47,8 @@ export const ProductDetail = () => {
                                                     type='text'
                                                     name='nombre'
                                                     id='nombre'
-                                                    value={product.nombre}
+                                                    placeholder={product.nombre}
+                                                    //value={product.nombre}
                                                     required
 
                                                 />
@@ -59,7 +60,8 @@ export const ProductDetail = () => {
                                                     type='text'
                                                     name='material'
                                                     id='material'
-                                                    value={product.material}
+                                                    placeholder={product.material}
+                                                    //alue={product.material}
                                                     required
                                                 />
                                             </Form.Group>
