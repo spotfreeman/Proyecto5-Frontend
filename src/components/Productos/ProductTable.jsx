@@ -3,7 +3,7 @@ import ProductoContext from "../../context/Producto/ProductoContext"
 import { Button, Card, Container, Row, Col } from "react-bootstrap"
 import { useNavigate } from "react-router-dom"
 
-import libreriaImagenes from '../../assets/img/img.js'
+import libreriaImagenes from '../../assets/img/imagenes'
 
 export const ProductTable = () => {
 

@@ -1,16 +1,16 @@
 //img.js
 //IMAGENES USUARIO
-import image01 from './hombre.png'
-import image02 from './mujer.png'
+import image01 from './usuario/hombre.png'
+import image02 from './usuario/mujer.png'
 
 //IMAGENES LOGO
-import print from './impresora.png'
+import print from '../img/logos/Impresora.png'
 
 //IMAGENES PRODUCTOS
-import img001 from './0001.jpg'
-import img002 from './hollownight.jpg'
-import img003 from './portal.jpg'
-import img004 from './setrol.jpg'
+import img001 from './productos/img001.jpg'
+import img002 from './productos/img002.jpg'
+import img003 from './productos/img003.jpg'
+import img004 from './productos/img004.jpg'
 // import img0005 from './elefante.jpg'
 // import img0006 from './macetero.jpg'
 

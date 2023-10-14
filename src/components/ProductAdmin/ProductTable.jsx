@@ -3,7 +3,7 @@ import ProductoContext from "../../context/Producto/ProductoContext"
 import { Button, Card, Container, Row, Col } from "react-bootstrap"
 import { useNavigate } from "react-router-dom"
 
-import libreriaImagenes from '../../assets/img/img.js'
+import libreriaImagenes from '../../assets/img/imagenes'
 
 export const ProductTable = () => {
 
@@ -42,7 +42,7 @@ export const ProductTable = () => {
                                                 <Row>
                                                     <Col className="text-center">
                                                         <img src={libreriaImagenes[prod.img].img} alt="Imagen de DB" height='300' />
-
+                                                        {/* <img src={print} alt="Imagen de DB" height='300' /> */}
                                                     </Col>
                                                     <Col className="text-center" style={{ backgroundColor: '#E3F9E7' }}>
                                                         <h3 style={{ height: '100px' }}>{prod.material}</h3>

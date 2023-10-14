@@ -11,7 +11,7 @@ import Nav from 'react-bootstrap/Nav'
 import Button from 'react-bootstrap/Button'
 
 //IMAGES
-import print from '../assets/img/impresora.png'
+import print from '../assets/img/logos/impresora.png'
 
 export const NavbarComponent = () => {
 

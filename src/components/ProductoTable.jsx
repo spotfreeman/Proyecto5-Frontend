@@ -14,12 +14,7 @@ import Col from 'react-bootstrap/Col';
 import { Container, Image } from "react-bootstrap";
 
 //IMAGES
-import libreriaImagenes from '../assets/img/img.js'
 
-import img001 from '../assets/img/productos/img001.jpg'
-import img002 from '../assets/img/productos/img002.jpg'
-import img003 from '../assets/img/productos/img003.jpg'
-import img004 from '../assets/img/productos/img004.jpg'
 
 
 import print from '../assets/img/impresora.png'
