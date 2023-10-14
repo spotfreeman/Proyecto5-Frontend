@@ -35,39 +35,39 @@ export const ProductTable = () => {
     return (
         <>
             <Container>
-                <Row className="justify-content-md-center">
-                    {products.map(prod => {
-                        return (
-                            <div key={prod._id}>
-                                <Card className="m-4" style={{ width: '30rem', backgroundColor: '#E3F9E7' }} className="p-2 m-2">
-                                    <Card.Title className="text-center">
-                                        <h3>{prod.nombre} </h3>
-                                    </Card.Title>
-                                    <Card.Body>
-                                        <Row>
-                                            <Col>
-                                                <img src={print} alt="Imagen de DB" height='300' />
-                                            </Col>
-                                            <Col className="text-center">
-                                                <h3>$ {prod.valor}</h3>
-                                            </Col>
-                                        </Row>
+                <Container>
+                    <div>
+                        <Row className="justify-content-md-center">
+                            {products.map(prod => {
+                                return (
+                                    <div key={prod._id}>
+                                        <Card className="p-2 m-2">
+                                            <Card.Title className="text-center">
+                                                <h3>{prod.nombre} </h3>
+                                            </Card.Title>
+                                            <Card.Body>
+                                                <Row>
+                                                    <Col>
+                                                        <img src={print} alt="Imagen de DB" height='300' />
+                                                    </Col>
+                                                    <Col className="text-center">
+                                                        <h3>{prod.material}</h3>
+                                                        <h3>$ {prod.valor}</h3>
+                                                    </Col>
+                                                </Row>
+                                            </Card.Body>
+                                            <Button variant="primary" onClick={() => (getOneProduct(prod._id), navigate(`/products/${prod._id}`))} >Detalle </Button>
+                                        </Card>
+                                    </div>
+                                )
+                            })}
+                        </Row>
 
-                                    </Card.Body>
-
-
-                                    <Button variant="primary" onClick={() => (getOneProduct(prod._id), navigate(`/products/${prod._id}`))} >Detalle </Button>
-                                </Card>
-
-
-
-                            </div>
-
-                        )
-                    })}
-                </Row>
-
+                    </div>
+                </Container>
             </Container>
+
+
 
         </>
     )
