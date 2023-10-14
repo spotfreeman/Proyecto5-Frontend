@@ -17,6 +17,7 @@ import { PageProducts } from '../pages/PageProducts';
 
 import { ProdAdminPage } from '../pages/ProdAdminPage';
 import { ProdAdminDetailPage } from '../pages/ProdAdminDetailPage';
+import { RegistoPage } from '../pages/RegistoPage';
 
 export const AppRouter = () => {
     return (
@@ -32,6 +33,7 @@ export const AppRouter = () => {
 
                     <Route path='adminproduct' element={<ProdAdminPage />} />
                     <Route path='adminproductdetail/:id' element={<ProdAdminDetailPage />} />
+                    <Route path='registro' element={<RegistoPage />} />
 
                     <Route
                         path='productos/*'

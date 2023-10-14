@@ -9,7 +9,7 @@ export const HomePage = () => {
         <>
             <Card bg='dark text-white rounded-0' className="card-fondo">
                 <Card.Body style={{ height: '700px', }} >
-                    <h1 style={{ fontSize: '100px', color: '#0017FF' }}>Imprimir es Facil!</h1>
+                    <h1 style={{ fontSize: '100px' }}>Imprimir es Facil!</h1>
                     <p style={{ fontSize: '50px' }}>¡Déjate sorprender por la magia de la impresión en 3D con nuestra Figura 3D personalizada! </p>
                 </Card.Body>
             </Card>
@@ -34,7 +34,7 @@ export const HomePage = () => {
             <Card bg='dark text-white rounded-0' className="card-fondo2">
                 <Card.Body style={{ height: '700px' }}>
                     <h3 className='' style={{ height: '500px' }}></h3>
-                    <h2 className='text-center' style={{ fontSize: '70px', color: '#0017FF' }}>Por que imprimir en 3D?</h2>
+                    <h2 className='text-center' style={{ fontSize: '70px' }}>Por que imprimir en 3D?</h2>
                     <h2 className='text-center'>Nuestras Figuras 3D se crean a partir de tus propias fotografías o diseños, lo que las convierte en un regalo perfecto y una pieza decorativa única para tu hogar u oficina. </h2>
 
                 </Card.Body>

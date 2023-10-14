@@ -31,7 +31,7 @@ export const SingUp = () => {
         event.preventDefault()
         const user = singupUser(data)
         console.log(user)
-        navigate('/')
+        navigate('/registro')
     }
 
     return (
