@@ -9,7 +9,7 @@ export const HomePage = () => {
         <>
             <Card bg='dark text-white rounded-0' className="card-fondo">
                 <Card.Body style={{ height: '700px', }} >
-                    <h1 style={{ fontSize: '100px' }}>Imprimir es Facil!</h1>
+                    <h1 style={{ fontSize: '100px', color: '#0017FF' }}>Imprimir es Facil!</h1>
                     <p style={{ fontSize: '50px' }}>¡Déjate sorprender por la magia de la impresión en 3D con nuestra Figura 3D personalizada! </p>
                 </Card.Body>
             </Card>
@@ -25,7 +25,7 @@ export const HomePage = () => {
                             <h2 style={{ fontSize: '80px' }}>Mi nombre es</h2>
                             <h2 style={{ fontSize: '80px' }}>Raul</h2>
                             <h2 style={{ fontSize: '80px' }}>Oyarzun</h2>
-                            <h3>Estudiante autodidacta y fanatico de las tecnologias, y podre ayudarte en tu incursion en tus hobbys.</h3>
+                            <h2 className='text-center'>Estudiante autodidacta y fanatico de las tecnologias, y podre ayudarte en tu incursion en tus hobbys.</h2>
                         </Col>
                     </Row>
                 </Card.Body>
@@ -34,8 +34,8 @@ export const HomePage = () => {
             <Card bg='dark text-white rounded-0' className="card-fondo2">
                 <Card.Body style={{ height: '700px' }}>
                     <h3 className='' style={{ height: '500px' }}></h3>
-                    <h2 className='text-center' style={{ fontSize: '70px' }}>Por que imprimir en 3D?</h2>
-                    <h3>Nuestras Figuras 3D se crean a partir de tus propias fotografías o diseños, lo que las convierte en un regalo perfecto y una pieza decorativa única para tu hogar u oficina. Cada figura se imprime con una precisión asombrosa y se detalla hasta el último píxel, lo que garantiza que cada rasgo y expresión se reproduzcan fielmente.</h3>
+                    <h2 className='text-center' style={{ fontSize: '70px', color: '#0017FF' }}>Por que imprimir en 3D?</h2>
+                    <h2 className='text-center'>Nuestras Figuras 3D se crean a partir de tus propias fotografías o diseños, lo que las convierte en un regalo perfecto y una pieza decorativa única para tu hogar u oficina. </h2>
 
                 </Card.Body>
             </Card>

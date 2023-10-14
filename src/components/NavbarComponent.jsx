@@ -21,7 +21,7 @@ export const NavbarComponent = () => {
     return (
         <>
             <div>
-                <Navbar sticky='top' expand='lg' className='bg-body-primary' bg='dark'>
+                <Navbar sticky='top' expand='lg' className='bg-body-primary ' bg='dark' >
                     <Container style={{ height: '90px' }} >
                         <Image src={print} style={{ width: '10%' }} fluid />
                         <Navbar.Brand className='text-white'>
@@ -34,8 +34,9 @@ export const NavbarComponent = () => {
                                     <>
                                         <Nav className="me-auto">
                                             <Nav.Link as={NavLink} to="/" className='text-white'><h4>Home</h4></Nav.Link>
-                                            <Nav.Link as={NavLink} to="/productos" className='text-white'><h4>Productos</h4></Nav.Link>
-                                            {/* <Nav.Link as={NavLink} to="/contact" className='text-white'><h4>Contactar</h4></Nav.Link> */}
+                                            {/* <Nav.Link as={NavLink} to="/productos" className='text-white'><h4>Productos</h4></Nav.Link> */}
+                                            <Nav.Link as={NavLink} to="/products" className='text-white'><h4>Productos USUARIO</h4></Nav.Link>
+                                            <Nav.Link as={NavLink} to="/adminproduct" className='text-white'><h4>Productos ADMIN</h4></Nav.Link>
                                         </Nav>
                                         <Nav>
                                             <Nav.Link as={NavLink} to='/' className='text-white'><Button variant="warning" onClick={() => logout()} >Cerrar Sesion</Button>{' '}</Nav.Link>
@@ -45,13 +46,11 @@ export const NavbarComponent = () => {
                                         <Nav className="me-auto">
                                             <Nav.Link as={NavLink} to="/" className='text-white'><h4>Home</h4></Nav.Link>
                                             {/* <Nav.Link as={NavLink} to="/productos" className='text-white'><h4>Productos</h4></Nav.Link> */}
-                                            <Nav.Link as={NavLink} to="/products" className='text-white'><h4>Productos NEW</h4></Nav.Link>
-                                            <Nav.Link as={NavLink} to="/solicitudes" className='text-white'><h4>Solicitud</h4></Nav.Link>
-
+                                            <Nav.Link as={NavLink} to="/products" className='text-white'><h4>Productos USUARIO</h4></Nav.Link>
                                         </Nav>
                                         <Nav>
-                                            <Nav.Link as={NavLink} to='/login' className='text-white'><Button variant="success">Login</Button>{' '}</Nav.Link>
-                                            <Nav.Link as={NavLink} to='/singup' className='text-white'><Button variant="primary">Registro</Button>{' '}</Nav.Link>
+                                            <Nav.Link as={NavLink} to='/login' className='text-white'><Button variant="danger">Login</Button>{' '}</Nav.Link>
+                                            <Nav.Link as={NavLink} to='/singup' className='text-white'><Button variant="warning">Registro</Button>{' '}</Nav.Link>
                                         </Nav>
                                     </>}
                         </Navbar.Collapse>

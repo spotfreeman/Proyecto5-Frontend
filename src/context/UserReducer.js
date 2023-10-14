@@ -43,12 +43,6 @@ export const reducer = (globalState, action) => {
                 usersData: action.payload
             }
 
-        case "ELIMINAR_USUARIO":
-            return {
-                ...globalState,
-                authStatus: true,
-                usersData: ''
-            }
 
         default:
             return globalState

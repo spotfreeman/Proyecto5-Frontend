@@ -3,21 +3,21 @@ body {
 }
 
 .card-fondo {
-    background-image: url("../public/assets/img/DSC03002_20.jpg");
+    background-image: url("../assets/img/DSC03002_20.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: center;
 }
 
 .card-fondo2 {
-    background-image: url("../public/assets/img/DSC03003_20.jpg");
+    background-image: url("../assets/img/DSC03003_20.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: center;
 }
 
 .fondo {
-    background-image: url("../public/assets/img/DSC02989.JPG");
+    background-image: url("../assets/img/DSC02989.JPG");
     background-size: cover;
     /* background-repeat: no-repeat; */
     background-position-y: center;

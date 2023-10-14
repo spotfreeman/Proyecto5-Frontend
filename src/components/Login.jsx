@@ -29,7 +29,7 @@ export const Login = () => {
         verifyingToken()
 
         if (authStatus) {
-            navigate('/productos')
+            navigate('/')
         }
         [authStatus, verifyingToken, navigate]
     })
@@ -57,7 +57,7 @@ export const Login = () => {
                         <div className="container" >
                             <Form onSubmit={(e) => { onSubmitData(e) }} >
                                 <Form.Group className="mb-3 text-center" controlId="formBasicEmail">
-                                    <Form.Label style={{ padding: '5px', margin: '10px' }}><h3>Correo</h3></Form.Label>
+                                    <Form.Label style={{ padding: '5px', margin: '10px' }}><h3>Usuario</h3></Form.Label>
                                     <Form.Control
                                         type="email"
                                         name="correo"
@@ -69,7 +69,7 @@ export const Login = () => {
                                 </Form.Group>
 
                                 <Form.Group className="mb-3 text-center" controlId="formBasicPassword">
-                                    <Form.Label style={{ padding: '5px', margin: '10px' }}><h3>Password</h3></Form.Label>
+                                    <Form.Label style={{ padding: '5px', margin: '10px' }}><h3>Contraseña</h3></Form.Label>
                                     <Form.Control
                                         type="password"
                                         name="password"

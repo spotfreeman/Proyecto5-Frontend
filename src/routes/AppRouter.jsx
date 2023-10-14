@@ -15,7 +15,8 @@ import { NavbarComponent } from "../components/NavbarComponent";
 import { ProdPage } from '../pages/ProdPage';
 import { PageProducts } from '../pages/PageProducts';
 
-import { SolicitudPage } from '../pages/SolicitudPage'
+import { ProdAdminPage } from '../pages/ProdAdminPage';
+import { ProdAdminDetailPage } from '../pages/ProdAdminDetailPage';
 
 export const AppRouter = () => {
     return (
@@ -29,7 +30,8 @@ export const AppRouter = () => {
                     <Route path='products/:id' element={<ProdPage />} />
                     <Route path='products' element={<PageProducts />} />
 
-                    <Route path='solicitudes' element={<SolicitudPage />} />
+                    <Route path='adminproduct' element={<ProdAdminPage />} />
+                    <Route path='adminproductdetail/:id' element={<ProdAdminDetailPage />} />
 
                     <Route
                         path='productos/*'

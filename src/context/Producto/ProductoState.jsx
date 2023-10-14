@@ -83,6 +83,20 @@ export const ProductoState = ({ children }) => {
         }
     }
 
+    const deleteProduct = async (id) => {
+        try {
+            const response = await axiosClient.delete(`/productos/${id}`)
+
+            dispatch({
+                type: 'DELETE_PRODUCT',
+                payload: response.data
+            })
+
+        } catch (error) {
+
+        }
+    }
+
 
 
 
@@ -95,7 +109,8 @@ export const ProductoState = ({ children }) => {
                 //Nuevos GETS
                 getProducts,
                 getOneProduct,
-                product
+                product,
+                deleteProduct
             }}
         >
             {children}
