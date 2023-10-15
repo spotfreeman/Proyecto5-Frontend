@@ -41,15 +41,14 @@ export const ProductTable = () => {
                                             </Card.Title>
                                             <Card.Body>
                                                 <Row >
-                                                    <Col className="text-center shadow p-3 mb-5 bg-white rounded">
+                                                    <Col className="text-center shadow p-3 mb-5 rounded"  >
                                                         {/* <img src={libreriaImagenes[prod.img].img} alt="Imagen de DB" height='300' /> */}
                                                         <img src={print} alt="Imagen de DB" height='300' />
                                                     </Col>
-                                                    <Col className='shadow p-3 mb-5 bg-white rounded' style={{ backgroundColor: '#E3F9E7' }}>
-                                                        <h3 style={{ height: '100px' }} className='shadow p-3 mb-5 rounded'>{prod.material}</h3>
-                                                        <h3 style={{ height: '100px' }} className='shadow p-3 mb-5 rounded'>$ {prod.valor}</h3>
-                                                        <Container className="text-center">
-
+                                                    <Col className='shadow p-3 mb-5 rounded' style={{ backgroundColor: '#CBCBCB' }}>
+                                                        <h3 style={{ height: '100px' }} className='shadow p-3 mb-5 bg-white rounded'>{prod.material}</h3>
+                                                        <h3 style={{ height: '100px' }} className='shadow p-3 mb-5 bg-white rounded'>$ {prod.valor}</h3>
+                                                        <Container className="text-center" >
                                                             <Button variant="danger" onClick={() => (getOneProduct(prod._id), navigate(`/adminproductdetail/${prod._id}`))} >Modificar</Button>
                                                         </Container>
                                                     </Col>

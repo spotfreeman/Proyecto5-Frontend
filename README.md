@@ -1,7 +1,5 @@
 # Proyecto 5 - Frontend
 
-colocar enlace aqui
-
 ## Descripción
 
 Desarrollo de proyecto de e-commerce para cumplimiento de metas de estudios UDD Desarrollo FullStack
