@@ -46,6 +46,7 @@ export const SingUp = () => {
                             <Form.Group className="mb-3 text-center" controlId="nombre">
                                 <Form.Label style={{ padding: '5px' }}><h3>Nombre</h3></Form.Label>
                                 <Form.Control
+                                    className='shadow p-3 mb-5 bg-white rounded'
                                     type="text"
                                     name="nombre"
                                     id="nombre"
@@ -58,6 +59,7 @@ export const SingUp = () => {
                             <Form.Group className="mb-3 text-center" controlId="apellido">
                                 <Form.Label style={{ padding: '5px' }}><h3>Apellido</h3></Form.Label>
                                 <Form.Control
+                                    className='shadow p-3 mb-5 bg-white rounded'
                                     type="text"
                                     name="apellido"
                                     id="apellido"
@@ -70,6 +72,7 @@ export const SingUp = () => {
                             <Form.Group className="mb-3 text-center" controlId="rut">
                                 <Form.Label style={{ padding: '5px' }}><h3>Rut</h3></Form.Label>
                                 <Form.Control
+                                    className='shadow p-3 mb-5 bg-white rounded'
                                     type="text"
                                     name="rut"
                                     id="rut"
@@ -82,6 +85,7 @@ export const SingUp = () => {
                             <Form.Group className="mb-3 text-center" controlId="correo">
                                 <Form.Label style={{ padding: '5px' }}><h3>Correo</h3></Form.Label>
                                 <Form.Control
+                                    className='shadow p-3 mb-5 bg-white rounded'
                                     type="email"
                                     name="correo"
                                     id="correo"
@@ -94,6 +98,7 @@ export const SingUp = () => {
                             <Form.Group className="mb-3 text-center" controlId="password">
                                 <Form.Label style={{ padding: '5px' }}><h3>Password</h3></Form.Label>
                                 <Form.Control
+                                    className='shadow p-3 mb-5 bg-white rounded'
                                     type="password"
                                     name="password"
                                     id="password"
@@ -105,7 +110,7 @@ export const SingUp = () => {
 
                             <Container className='text-center'>
                                 <Button style={{ margin: '10px', width: '200px' }} variant="primary" type="submit">
-                                    Registrarme!
+                                    Crear nuevo usuario
                                 </Button>
                             </Container>
                         </Form>

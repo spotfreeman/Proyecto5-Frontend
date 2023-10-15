@@ -23,8 +23,8 @@ export const ProductDetail = () => {
     return (
         <>
             <Container>
-                <Card className='m-4'>
-                    <Card.Title style={{ backgroundColor: '#E3F9E7' }}>
+                <Card className='m-4 p-4'>
+                    <Card.Title style={{ backgroundColor: '#E3F9E7' }} className='shadow p-3 mb-5 rounded'>
                         <h2 className='text-center'>{product.nombre}</h2>
                     </Card.Title>
 
@@ -32,9 +32,9 @@ export const ProductDetail = () => {
 
                     <Card.Text>
 
-                        <Row>
+                        <Row >
                             <Col className='text-center' >
-                                <Image className='align-me' src={print} style={{ width: '100%' }} fluid />
+                                <Image className='align-me' src={print} style={{ width: '80%' }} fluid />
                             </Col>
 
                             <Col >
@@ -44,6 +44,7 @@ export const ProductDetail = () => {
                                             <Form.Group controlId='nombre'>
                                                 <Form.Label>Nombre</Form.Label>
                                                 <Form.Control
+                                                    className='shadow p-3 mb-5 bg-white rounded'
                                                     type='text'
                                                     name='nombre'
                                                     id='nombre'
@@ -51,12 +52,14 @@ export const ProductDetail = () => {
                                                     //value={product.nombre}
                                                     required
 
+
                                                 />
                                             </Form.Group>
 
                                             <Form.Group controlId='material'>
                                                 <Form.Label>Material</Form.Label>
                                                 <Form.Control
+                                                    className='shadow p-3 mb-5 bg-white rounded'
                                                     type='text'
                                                     name='material'
                                                     id='material'
@@ -69,6 +72,7 @@ export const ProductDetail = () => {
                                             <Form.Group controlId='nombre'>
                                                 <Form.Label>Descripcion</Form.Label>
                                                 <Form.Control
+                                                    className='shadow p-3 mb-5 bg-white rounded'
                                                     type='text'
                                                     name='descripcion'
                                                     id='descripcion'
@@ -80,6 +84,7 @@ export const ProductDetail = () => {
                                             <Form.Group controlId='nombre'>
                                                 <Form.Label>Valor</Form.Label>
                                                 <Form.Control
+                                                    className='shadow p-3 mb-5 bg-white rounded'
                                                     type='text'
                                                     name='valor'
                                                     id='valor'
@@ -91,16 +96,22 @@ export const ProductDetail = () => {
                                         </Form>
                                     </Card.Text>
                                 </Row>
-                                <Row>
-                                    <Container className='text-center p-3' style={{ height: '300px' }}>
-                                        <Button variant="success" onClick={() => (deleteProduct(prod._id), navigate(`/`))} >Actualizar Producto</Button>
-                                    </Container>
+                                <Row >
+
+                                    <Col>
+                                        <Container className='text-center p-3' style={{ height: '100px' }}>
+                                            <Button variant="success" onClick={() => (deleteProduct(prod._id), navigate(`/`))} >Actualizar Producto</Button>
+                                        </Container>
+
+                                    </Col>
+                                    <Col>
+                                        <Container className='text-center p-3'>
+                                            <Button variant="danger" onClick={() => (deleteProduct(prod._id), navigate(`/`))} >Borrar Producto</Button>
+                                        </Container>
+
+                                    </Col>
 
 
-
-                                    <Container className='text-center p-3'>
-                                        <Button variant="danger" onClick={() => (deleteProduct(prod._id), navigate(`/`))} >Borrar Producto</Button>
-                                    </Container>
                                 </Row>
                             </Col>
                         </Row>

@@ -54,11 +54,12 @@ export const Login = () => {
                 </Container>
                 <Container style={{ width: '600px', padding: '10px' }}>
                     <Card>
-                        <div className="container" >
-                            <Form onSubmit={(e) => { onSubmitData(e) }} >
-                                <Form.Group className="mb-3 text-center" controlId="formBasicEmail">
+                        <div className="container " >
+                            <Form onSubmit={(e) => { onSubmitData(e) }}>
+                                <Form.Group className="mb-3 text-center " controlId="formBasicEmail">
                                     <Form.Label style={{ padding: '5px', margin: '10px' }}><h3>Usuario</h3></Form.Label>
                                     <Form.Control
+                                        className='shadow p-3 mb-5 bg-white rounded'
                                         type="email"
                                         name="correo"
                                         id="correo"
@@ -71,6 +72,7 @@ export const Login = () => {
                                 <Form.Group className="mb-3 text-center" controlId="formBasicPassword">
                                     <Form.Label style={{ padding: '5px', margin: '10px' }}><h3>Contraseña</h3></Form.Label>
                                     <Form.Control
+                                        className='shadow p-3 mb-5 bg-white rounded'
                                         type="password"
                                         name="password"
                                         id="password"
@@ -80,7 +82,7 @@ export const Login = () => {
                                     />
                                 </Form.Group>
                                 <Container className='text-center'>
-                                    <Button style={{ margin: '10px', width: '200px' }} variant="primary" type="submit">
+                                    <Button style={{ margin: '10px', width: '200px' }} variant="primary" type="submit" className='shadow p-3 mb-5 rounded'>
                                         Iniciar Sesion
                                     </Button>
                                 </Container>

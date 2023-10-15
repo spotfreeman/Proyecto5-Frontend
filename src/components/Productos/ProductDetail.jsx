@@ -24,21 +24,21 @@ export const ProductDetail = () => {
     return (
         <>
             <Container>
-                <Card className='m-4'>
-                    <Card.Title style={{ backgroundColor: '#E3F9E7' }}>
-                        <h2 className='text-center'>{product.nombre}</h2>
+                <Card className='shadow p-3 mb-5 bg-white rounded'>
+                    <Card.Title>
+                        <h2 className='text-center shadow p-3 mb-5 bg-white rounded'>{product.nombre}</h2>
                     </Card.Title>
 
                     <Card.Text>
 
                         <Row>
-                            <Col className='text-center' >
-                                <Image className='align-me' src={print} style={{ width: '100%' }} fluid />
+                            <Col className='text-center ' >
+                                <Image className='shadow p-3 mb-5 bg-white rounded' src={print} />
                             </Col>
 
                             <Col >
                                 <Row >
-                                    <Container className='m-2 ' style={{ backgroundColor: '#E3F9E7' }}>
+                                    <Container className='shadow p-3 mb-5 bg-white rounded' style={{ backgroundColor: '#E3F9E7' }}>
                                         <h6>Codigo Producto: {product.codigo}</h6>
                                         <h3>Tipo de Material </h3>
                                         <h3 className='text-center'>{product.material}</h3>
@@ -46,18 +46,17 @@ export const ProductDetail = () => {
                                     </Container >
                                 </Row>
                                 <Row>
-                                    <Container className='m-2' style={{ backgroundColor: '#E3F9E7' }}>
+                                    <Container className='shadow p-3 mb-5 bg-white rounded' style={{ backgroundColor: '#E3F9E7' }}>
                                         <h4>{product.descripcion}</h4>
 
                                     </Container>
 
-                                    <Container className='m-2' style={{ backgroundColor: '#E3F9E7' }}>
+                                    <Container className='shadow p-3 mb-5 bg-white rounded' style={{ backgroundColor: '#E3F9E7' }}>
                                         <h3>Valor : $ {product.valor}</h3>
                                     </Container>
 
 
-                                    <Container>
-                                        <h3>BOTON DE PAYPAL</h3>
+                                    <Container className='shadow p-3 mb-5 bg-white rounded'>
                                         <PaypalButton />
                                     </Container>
                                 </Row>

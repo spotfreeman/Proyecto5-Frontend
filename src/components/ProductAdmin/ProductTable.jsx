@@ -31,25 +31,29 @@ export const ProductTable = () => {
             <Container>
                 <Container>
                     <div>
-                        <Row className="justify-content-md-center">
+                        <Row className="justify-content-md-cente " >
                             {products.map(prod => {
                                 return (
                                     <div key={prod._id}>
-                                        <Card className="p-2 m-2">
-                                            <Card.Title className="text-center" style={{ backgroundColor: '#E3F9E7' }}>
-                                                <h3>{prod.nombre} </h3>
+                                        <Card className="m-2 shadow p-3 mb-5 bg-white rounded">
+                                            <Card.Title className="text-center shadow p-3 mb-5 rounded" style={{ backgroundColor: '#E3F9E7' }}>
+                                                <h3 className="text-center">{prod.nombre} </h3>
                                             </Card.Title>
                                             <Card.Body>
-                                                <Row>
-                                                    <Col className="text-center">
+                                                <Row >
+                                                    <Col className="text-center shadow p-3 mb-5 bg-white rounded">
                                                         {/* <img src={libreriaImagenes[prod.img].img} alt="Imagen de DB" height='300' /> */}
                                                         <img src={print} alt="Imagen de DB" height='300' />
                                                     </Col>
-                                                    <Col className="text-center" style={{ backgroundColor: '#E3F9E7' }}>
-                                                        <h3 style={{ height: '100px' }}>{prod.material}</h3>
-                                                        <h3 style={{ height: '100px' }}>$ {prod.valor}</h3>
-                                                        <Button variant="danger" onClick={() => (getOneProduct(prod._id), navigate(`/adminproductdetail/${prod._id}`))} >Borrar Producto</Button>
+                                                    <Col className='shadow p-3 mb-5 bg-white rounded' style={{ backgroundColor: '#E3F9E7' }}>
+                                                        <h3 style={{ height: '100px' }} className='shadow p-3 mb-5 rounded'>{prod.material}</h3>
+                                                        <h3 style={{ height: '100px' }} className='shadow p-3 mb-5 rounded'>$ {prod.valor}</h3>
+                                                        <Container className="text-center">
+
+                                                            <Button variant="danger" onClick={() => (getOneProduct(prod._id), navigate(`/adminproductdetail/${prod._id}`))} >Modificar</Button>
+                                                        </Container>
                                                     </Col>
+
                                                 </Row>
                                             </Card.Body>
 
@@ -61,7 +65,7 @@ export const ProductTable = () => {
 
                     </div>
                 </Container>
-            </Container>
+            </Container >
 
 
 
