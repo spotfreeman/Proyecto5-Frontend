@@ -12,7 +12,7 @@ https://github.com/spotfreeman/Proyecto5-Frontend
 
 ## Insignias
 
-![Badge en Finalizado](https://img.shields.io/badge/STATUS-EnDesarrollo-green)
+![Badge en Finalizado](https://img.shields.io/badge/STATUS-Finalizado-green)
 
 ## Visual
 
