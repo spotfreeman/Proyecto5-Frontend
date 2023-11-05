@@ -12,7 +12,7 @@ https://github.com/spotfreeman/Proyecto5-Frontend
 
 ## Insignias
 
-![Badge en Desarrollo](https://img.shields.io/badge/STATUS-EnDesarrollo-green)
+![Badge en Finalizado](https://img.shields.io/badge/STATUS-EnDesarrollo-green)
 
 ## Visual
 
@@ -43,4 +43,3 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE.md](LICEN
 ## Expresiones de gratitud 🎁
 
 Agradecimientos especiales a todos por el apoyo y la motivacion a realizar este Bootcamp...
-Este archivo readme se ha desarrollado utilizando como referencia los siguientes proyectos:
